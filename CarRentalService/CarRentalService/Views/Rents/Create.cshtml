@@ -2,9 +2,11 @@
 
 @{
     ViewData["Title"] = "Create";
+    var car = ViewBag.Car as CarRentalService.Domain.Models.Car;
+    var customer = ViewBag.Customer as CarRentalService.Domain.Models.Identity.Customer;
 }
 
-<h1>Create</h1>
+<h1>Car Rental Service</h1>
 
 <h4>Rent</h4>
 <hr />
@@ -13,8 +15,14 @@
         <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
-                <label asp-for="CarId" class="control-label"></label>
-                <select asp-for="CarId" class ="form-control" asp-items="ViewBag.CarId"></select>
+                <label class="control-label">Customer</label>
+                <input class="form-control" value="@customer.FirstName" disabled />
+                <input type="hidden" asp-for="CustomerId" value="@customer.Id" />
+            </div>
+            <div class="form-group">
+                <label class="control-label">Car</label>
+                <input class="form-control" value="@car.Name" disabled />
+                <input type="hidden" asp-for="CarId" value="@car.Id" />
             </div>
             <div class="form-group">
                 <label asp-for="RentDate" class="control-label"></label>
@@ -43,5 +51,7 @@
 </div>
 
 @section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
 }

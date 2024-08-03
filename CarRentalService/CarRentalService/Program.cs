@@ -20,11 +20,12 @@ builder.Services.AddControllersWithViews();
 
 builder.Services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
 builder.Services.AddScoped(typeof(IRentRepository), typeof(RentRepository));
+builder.Services.AddScoped(typeof(IUserRepository), typeof(UserRepository));
 
 builder.Services.AddTransient<ICarService, CarService>();
 builder.Services.AddTransient<IRentService, RentService>();
 builder.Services.AddTransient<IReturnService, ReturnService>();
-
+builder.Services.AddTransient<IUserService, UserService>();
 
 
 var app = builder.Build();

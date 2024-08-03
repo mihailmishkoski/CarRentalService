@@ -18,8 +18,15 @@ namespace CarRentalService.Service.Implementation
         {
             this.carRepository = carRepository;
         }
+
+        public bool AvailableCheck(Guid ?id)
+        {
+            return carRepository.Get(id).IsAvailable == true;
+        }
+
         public void CreateNewCar(Car c)
         {
+            c.IsAvailable = true;
             carRepository.Insert(c);
         }
 
@@ -38,6 +45,20 @@ namespace CarRentalService.Service.Implementation
         public List<Car> GetCars()
         {
             return carRepository.GetAll().ToList();
+        }
+
+        public void SetCarAsAvailable(Guid? id)
+        {
+            Car car = carRepository.Get(id);
+            car.IsAvailable = true;
+            carRepository.Update(car);
+        }
+
+        public void SetCarAsUnavailable(Guid? id)
+        {
+            Car car = carRepository.Get(id);
+            car.IsAvailable = false;
+            carRepository.Update(car);
         }
 
         public Car UpdateCar(Car id)

@@ -22,14 +22,33 @@ namespace CarRentalService.Service.Implementation
         }
         public void CreateNewRent(Rent r, string customerId)
         {
-            r.CustomerId = customerId;
-            rentRepository.Insert(r);
+            if (carService.AvailableCheck(r.CarId))
+            {
+                carService.SetCarAsUnavailable(r.CarId);
+                r.CustomerId = customerId;
+                rentRepository.Insert(r);
+            }
+            //else return exception
         }
 
+        /// <summary>
+        /// Deletes a rent and sets the associated car as available.This is an atomic operation, 
+        /// so changes to the Car and Rent are made within a try/catch block to ensure consistency.
+        /// </summary>
+        /// <param name="id">The unique identifier of the rent to be deleted.</param>
+        /// <returns>Deleted rent</returns>
         public Rent DeleteRent(Guid ?id)
         {
             Rent rent = _rentRepository.GetDetailsForRent(id);
-            rentRepository.Delete(rent);
+            try 
+            {
+                rentRepository.Delete(rent);
+                carService.SetCarAsAvailable(rent.CarId);
+            }
+            catch 
+            {
+                //No rent exception
+            }
             return rent;
         }
 

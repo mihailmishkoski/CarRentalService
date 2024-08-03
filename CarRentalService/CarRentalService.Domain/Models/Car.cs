@@ -22,7 +22,7 @@ namespace CarRentalService.Domain.Models
 
         public string LicensePlate { get; set; }
 
-        public bool IsAvailable { get; set; }
+        public bool ?IsAvailable { get; set; }
 
         public ICollection<Rent>? Rents { get; set; }
     }

@@ -15,3 +15,4 @@ D:\Web Projects\CarRentalService\CarRentalService\CarRentalService.Repository\ob
 D:\Web Projects\CarRentalService\CarRentalService\CarRentalService.Repository\obj\Debug\net8.0\CarRentalService.Repository.pdb
 D:\Web Projects\CarRentalService\CarRentalService\CarRentalService.Repository\obj\Debug\net8.0\CarRentalService.Repository.genruntimeconfig.cache
 D:\Web Projects\CarRentalService\CarRentalService\CarRentalService.Repository\obj\Debug\net8.0\ref\CarRentalService.Repository.dll
+D:\Web Projects\CarRentalService\CarRentalService\CarRentalService.Repository\obj\Debug\net8.0\CarRentalService.Repository.sourcelink.json

@@ -15,5 +15,10 @@ namespace CarRentalService.Service.Interface
         public Car DeleteCar(Guid id);
 
         public Car UpdateCar(Car id);
+
+        public bool AvailableCheck(Guid ?id);
+
+        public void SetCarAsUnavailable(Guid ?id);
+        public void SetCarAsAvailable(Guid? id);
     }
 }

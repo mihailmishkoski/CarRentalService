@@ -56,7 +56,7 @@ namespace CarRentalService.Web.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Create([Bind("Name,Description,Model,DateManufactured,KilometersTraveled,Color,LicensePlate,IsAvailable,Id")] Car car)
+        public IActionResult Create([Bind("Name,Description,Model,DateManufactured,KilometersTraveled,Color,LicensePlate,Id")] Car car)
         {
             if (ModelState.IsValid)
             {

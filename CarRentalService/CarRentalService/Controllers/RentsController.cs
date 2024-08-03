@@ -17,11 +17,12 @@ namespace CarRentalService.Web.Controllers
     {
         private readonly IRentService rentService;
         private readonly ICarService carService;
-
-        public RentsController(IRentService rentService, ICarService carService)
+        private readonly IUserService userService;
+        public RentsController(IRentService rentService, ICarService carService, IUserService userService)
         {
             this.carService = carService;
             this.rentService = rentService;
+            this.userService = userService;
         }
 
         // GET: Rents
@@ -45,9 +46,13 @@ namespace CarRentalService.Web.Controllers
         }
 
         // GET: Rents/Create
-        public IActionResult Create()
+        public IActionResult Create(Guid id)
         {
-            ViewData["CarId"] = new SelectList(carService.GetCars(), "Id", "Name");
+            var car = carService.GetCarById(id);
+            string? customerId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            var customer = userService.GetCustomerById(customerId);
+            ViewData["Car"] = car;
+            ViewData["Customer"] = customer;
             return View();
         }
 
@@ -62,7 +67,7 @@ namespace CarRentalService.Web.Controllers
             {
                 string ?customerId = User.FindFirstValue(ClaimTypes.NameIdentifier);
                 rentService.CreateNewRent(rent,customerId);
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction("Index", "Cars");
             }
             ViewData["CarId"] = new SelectList(carService.GetCars(), "Id", "Name", rent.CarId);
             return View(rent);

@@ -14,5 +14,7 @@ namespace CarRentalService.Repository
         public virtual DbSet<Car> Cars { get; set; }
         public virtual DbSet<Rent> Rents { get; set; }
         public virtual DbSet<Return> Returns { get; set; }
+
+        public virtual DbSet<Customer> Customers { get; set; }
     }
 }
