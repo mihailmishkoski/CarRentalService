@@ -1,3 +1,4 @@
+using CarRentalService.Domain.Models;
 using CarRentalService.Domain.Models.Identity;
 using CarRentalService.Repository;
 using CarRentalService.Repository.Implementation;
@@ -27,7 +28,7 @@ builder.Services.AddTransient<IRentService, RentService>();
 builder.Services.AddTransient<IReturnService, ReturnService>();
 builder.Services.AddTransient<IUserService, UserService>();
 
-
+builder.Services.AddSingleton<RentParameters>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

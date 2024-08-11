@@ -8361,19 +8361,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\mihai\\.nuget\\packages\\": {}
+    "C:\\Users\\damch\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Web Projects\\CarRentalService\\CarRentalService\\CarRentalService\\CarRentalService.Web.csproj",
+      "projectUniqueName": "C:\\Users\\damch\\OneDrive\\Desktop\\CarRentalService\\CarRentalService\\CarRentalService\\CarRentalService.Web.csproj",
       "projectName": "CarRentalService.Web",
-      "projectPath": "D:\\Web Projects\\CarRentalService\\CarRentalService\\CarRentalService\\CarRentalService.Web.csproj",
-      "packagesPath": "C:\\Users\\mihai\\.nuget\\packages\\",
-      "outputPath": "D:\\Web Projects\\CarRentalService\\CarRentalService\\CarRentalService\\obj\\",
+      "projectPath": "C:\\Users\\damch\\OneDrive\\Desktop\\CarRentalService\\CarRentalService\\CarRentalService\\CarRentalService.Web.csproj",
+      "packagesPath": "C:\\Users\\damch\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\damch\\OneDrive\\Desktop\\CarRentalService\\CarRentalService\\CarRentalService\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\mihai\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\damch\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -8387,11 +8387,11 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "D:\\Web Projects\\CarRentalService\\CarRentalService\\CarRentalService.Repository\\CarRentalService.Repository.csproj": {
-              "projectPath": "D:\\Web Projects\\CarRentalService\\CarRentalService\\CarRentalService.Repository\\CarRentalService.Repository.csproj"
+            "C:\\Users\\damch\\OneDrive\\Desktop\\CarRentalService\\CarRentalService\\CarRentalService.Repository\\CarRentalService.Repository.csproj": {
+              "projectPath": "C:\\Users\\damch\\OneDrive\\Desktop\\CarRentalService\\CarRentalService\\CarRentalService.Repository\\CarRentalService.Repository.csproj"
             },
-            "D:\\Web Projects\\CarRentalService\\CarRentalService\\CarRentalService.Service\\CarRentalService.Service.csproj": {
-              "projectPath": "D:\\Web Projects\\CarRentalService\\CarRentalService\\CarRentalService.Service\\CarRentalService.Service.csproj"
+            "C:\\Users\\damch\\OneDrive\\Desktop\\CarRentalService\\CarRentalService\\CarRentalService.Service\\CarRentalService.Service.csproj": {
+              "projectPath": "C:\\Users\\damch\\OneDrive\\Desktop\\CarRentalService\\CarRentalService\\CarRentalService.Service\\CarRentalService.Service.csproj"
             }
           }
         }

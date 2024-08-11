@@ -167,6 +167,23 @@ namespace CarRentalService.Repository.Migrations
                     b.ToTable("Rents");
                 });
 
+            modelBuilder.Entity("CarRentalService.Domain.Models.RentParameters", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<int?>("Discount")
+                        .HasColumnType("int");
+
+                    b.Property<int>("MinimumRentDays")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("RentParameters");
+                });
+
             modelBuilder.Entity("CarRentalService.Domain.Models.Return", b =>
                 {
                     b.Property<Guid>("Id")

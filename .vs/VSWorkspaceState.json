@@ -1,0 +1,12 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\CarRentalService",
+    "\\CarRentalService\\CarRentalService",
+    "\\CarRentalService\\CarRentalService.Domain",
+    "\\CarRentalService\\CarRentalService.Domain\\Models",
+    "\\CarRentalService\\CarRentalService\\Controllers"
+  ],
+  "SelectedNode": "\\CarRentalService\\CarRentalService.sln",
+  "PreviewInSolutionExplorer": false
+}
