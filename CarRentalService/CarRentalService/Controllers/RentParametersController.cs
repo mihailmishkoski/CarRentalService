@@ -7,9 +7,11 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using CarRentalService.Domain.Models;
 using CarRentalService.Repository;
+using Microsoft.AspNetCore.Authorization;
 
 namespace CarRentalService.Web.Controllers
 {
+    [Authorize (Roles = "Admin")]
     public class RentParametersController : Controller
     {
         private readonly ApplicationDbContext _context;

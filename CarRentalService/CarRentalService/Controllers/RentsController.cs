@@ -82,9 +82,7 @@ namespace CarRentalService.Web.Controllers
         [ValidateAntiForgeryToken]
         public IActionResult Create([Bind("CarId,RentDate,ReturnDate,RentAmount")] Rent rent)
         {
-            var rentDays = rent.ReturnDate.Value.Subtract(rent.RentDate);
-            var validDate = rent.RentDate < rent.ReturnDate ? true : false;
-            if (ModelState.IsValid && rentDays.Days > rentParameters.MinimumRentDays && validDate)
+            if (ModelState.IsValid)
             {
                 string? customerId = User.FindFirstValue(ClaimTypes.NameIdentifier);
                 try

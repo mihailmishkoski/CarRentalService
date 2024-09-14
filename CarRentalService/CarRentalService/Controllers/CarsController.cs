@@ -9,12 +9,9 @@ using CarRentalService.Domain.Models;
 using CarRentalService.Repository;
 using System.Runtime.ConstrainedExecution;
 using CarRentalService.Service.Interface;
-<<<<<<< HEAD
 using Microsoft.AspNetCore.Authorization;
-
-=======
 using System.Text.RegularExpressions;
->>>>>>> 8ce4a619920af9a110912a90112c5c8dd936636a
+
 
 namespace CarRentalService.Web.Controllers
 {

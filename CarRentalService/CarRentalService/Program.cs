@@ -34,13 +34,12 @@ builder.Services.AddTransient<ICarService, CarService>();
 builder.Services.AddTransient<IRentService, RentService>();
 builder.Services.AddTransient<IReturnService, ReturnService>();
 builder.Services.AddTransient<IUserService, UserService>();
-<<<<<<< HEAD
+
 builder.Services.AddTransient<IRentParamsService, RentParamsService>();
 
-=======
 
 builder.Services.AddSingleton<RentParameters>();
->>>>>>> 8ce4a619920af9a110912a90112c5c8dd936636a
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
