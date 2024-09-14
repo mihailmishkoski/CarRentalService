@@ -9,8 +9,12 @@ using CarRentalService.Domain.Models;
 using CarRentalService.Repository;
 using System.Runtime.ConstrainedExecution;
 using CarRentalService.Service.Interface;
+<<<<<<< HEAD
 using Microsoft.AspNetCore.Authorization;
 
+=======
+using System.Text.RegularExpressions;
+>>>>>>> 8ce4a619920af9a110912a90112c5c8dd936636a
 
 namespace CarRentalService.Web.Controllers
 {
@@ -63,6 +67,19 @@ namespace CarRentalService.Web.Controllers
         [Authorize(Roles = "Admin")]
         public IActionResult Create([Bind("Name,Description,Model,DateManufactured,KilometersTraveled,Color,LicensePlate,Id")] Car car)
         {
+            var licensePlateFormat = @"^[A-Z]{2}-\d{4}-[A-Z]{2}$";
+            var licensePlate = car.LicensePlate;
+            List<Car> cars = carService.GetCars();
+            foreach(Car check in cars){
+                if (check.LicensePlate.Equals(licensePlate))
+                {
+                    ModelState.AddModelError("LicensePlate", "This car already exists");
+                }
+            }
+            if(!Regex.IsMatch(car.LicensePlate.ToUpper(), licensePlateFormat))
+            {
+                ModelState.AddModelError("LicensePlate", "The license plate must be in this format: AB-1234-CD");
+            }
             if (ModelState.IsValid)
             {
                 carService.CreateNewCar(car);

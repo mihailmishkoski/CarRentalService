@@ -16,7 +16,11 @@ namespace CarRentalService.Repository
         public virtual DbSet<Return> Returns { get; set; }
 
         public virtual DbSet<Customer> Customers { get; set; }
+<<<<<<< HEAD
 
         public virtual DbSet<RentParams> RentParam { get; set; }
+=======
+        public virtual DbSet<RentParameters> RentParameters{ get; set; }
+>>>>>>> 8ce4a619920af9a110912a90112c5c8dd936636a
     }
 }

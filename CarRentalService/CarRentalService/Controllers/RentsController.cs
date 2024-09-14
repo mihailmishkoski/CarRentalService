@@ -21,11 +21,13 @@ namespace CarRentalService.Web.Controllers
         private readonly IRentService rentService;
         private readonly ICarService carService;
         private readonly IUserService userService;
-        public RentsController(IRentService rentService, ICarService carService, IUserService userService)
+        private readonly RentParameters rentParameters;
+        public RentsController(IRentService rentService, ICarService carService, IUserService userService, RentParameters rentParameters)
         {
             this.carService = carService;
             this.rentService = rentService;
             this.userService = userService;
+            this.rentParameters = rentParameters;
         }
 
         // GET: Rents
@@ -80,7 +82,9 @@ namespace CarRentalService.Web.Controllers
         [ValidateAntiForgeryToken]
         public IActionResult Create([Bind("CarId,RentDate,ReturnDate,RentAmount")] Rent rent)
         {
-            if (ModelState.IsValid)
+            var rentDays = rent.ReturnDate.Value.Subtract(rent.RentDate);
+            var validDate = rent.RentDate < rent.ReturnDate ? true : false;
+            if (ModelState.IsValid && rentDays.Days > rentParameters.MinimumRentDays && validDate)
             {
                 string? customerId = User.FindFirstValue(ClaimTypes.NameIdentifier);
                 try

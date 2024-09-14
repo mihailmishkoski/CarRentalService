@@ -167,12 +167,17 @@ namespace CarRentalService.Repository.Migrations
                     b.ToTable("Rents");
                 });
 
+<<<<<<< HEAD
             modelBuilder.Entity("CarRentalService.Domain.Models.RentParams", b =>
+=======
+            modelBuilder.Entity("CarRentalService.Domain.Models.RentParameters", b =>
+>>>>>>> 8ce4a619920af9a110912a90112c5c8dd936636a
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
+<<<<<<< HEAD
                     b.Property<decimal>("AdditionalFees")
                         .HasColumnType("decimal(18,2)");
 
@@ -180,11 +185,21 @@ namespace CarRentalService.Repository.Migrations
                         .HasColumnType("decimal(18,2)");
 
                     b.Property<int>("MinimumDaysForRent")
+=======
+                    b.Property<int?>("Discount")
+                        .HasColumnType("int");
+
+                    b.Property<int>("MinimumRentDays")
+>>>>>>> 8ce4a619920af9a110912a90112c5c8dd936636a
                         .HasColumnType("int");
 
                     b.HasKey("Id");
 
+<<<<<<< HEAD
                     b.ToTable("RentParam");
+=======
+                    b.ToTable("RentParameters");
+>>>>>>> 8ce4a619920af9a110912a90112c5c8dd936636a
                 });
 
             modelBuilder.Entity("CarRentalService.Domain.Models.Return", b =>

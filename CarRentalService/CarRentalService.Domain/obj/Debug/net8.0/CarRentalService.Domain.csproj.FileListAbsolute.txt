@@ -13,3 +13,18 @@ D:\Web Projects\CarRentalService\CarRentalService\CarRentalService.Domain\obj\De
 D:\Web Projects\CarRentalService\CarRentalService\CarRentalService.Domain\obj\Debug\net8.0\CarRentalService.Domain.genruntimeconfig.cache
 D:\Web Projects\CarRentalService\CarRentalService\CarRentalService.Domain\obj\Debug\net8.0\ref\CarRentalService.Domain.dll
 D:\Web Projects\CarRentalService\CarRentalService\CarRentalService.Domain\obj\Debug\net8.0\CarRentalService.Domain.sourcelink.json
+C:\Users\damch\OneDrive\Desktop\CarRentalService\CarRentalService\CarRentalService.Domain\bin\Debug\net8.0\CarRentalService.Domain.deps.json
+C:\Users\damch\OneDrive\Desktop\CarRentalService\CarRentalService\CarRentalService.Domain\bin\Debug\net8.0\CarRentalService.Domain.runtimeconfig.json
+C:\Users\damch\OneDrive\Desktop\CarRentalService\CarRentalService\CarRentalService.Domain\bin\Debug\net8.0\CarRentalService.Domain.dll
+C:\Users\damch\OneDrive\Desktop\CarRentalService\CarRentalService\CarRentalService.Domain\bin\Debug\net8.0\CarRentalService.Domain.pdb
+C:\Users\damch\OneDrive\Desktop\CarRentalService\CarRentalService\CarRentalService.Domain\obj\Debug\net8.0\CarRentalService.Domain.csproj.AssemblyReference.cache
+C:\Users\damch\OneDrive\Desktop\CarRentalService\CarRentalService\CarRentalService.Domain\obj\Debug\net8.0\CarRentalService.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\damch\OneDrive\Desktop\CarRentalService\CarRentalService\CarRentalService.Domain\obj\Debug\net8.0\CarRentalService.Domain.AssemblyInfoInputs.cache
+C:\Users\damch\OneDrive\Desktop\CarRentalService\CarRentalService\CarRentalService.Domain\obj\Debug\net8.0\CarRentalService.Domain.AssemblyInfo.cs
+C:\Users\damch\OneDrive\Desktop\CarRentalService\CarRentalService\CarRentalService.Domain\obj\Debug\net8.0\CarRentalService.Domain.csproj.CoreCompileInputs.cache
+C:\Users\damch\OneDrive\Desktop\CarRentalService\CarRentalService\CarRentalService.Domain\obj\Debug\net8.0\CarRentalService.Domain.sourcelink.json
+C:\Users\damch\OneDrive\Desktop\CarRentalService\CarRentalService\CarRentalService.Domain\obj\Debug\net8.0\CarRentalService.Domain.dll
+C:\Users\damch\OneDrive\Desktop\CarRentalService\CarRentalService\CarRentalService.Domain\obj\Debug\net8.0\refint\CarRentalService.Domain.dll
+C:\Users\damch\OneDrive\Desktop\CarRentalService\CarRentalService\CarRentalService.Domain\obj\Debug\net8.0\CarRentalService.Domain.pdb
+C:\Users\damch\OneDrive\Desktop\CarRentalService\CarRentalService\CarRentalService.Domain\obj\Debug\net8.0\CarRentalService.Domain.genruntimeconfig.cache
+C:\Users\damch\OneDrive\Desktop\CarRentalService\CarRentalService\CarRentalService.Domain\obj\Debug\net8.0\ref\CarRentalService.Domain.dll
