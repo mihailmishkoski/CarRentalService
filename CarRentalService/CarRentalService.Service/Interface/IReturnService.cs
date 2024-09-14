@@ -9,11 +9,11 @@ namespace CarRentalService.Service.Interface
 {
     public interface IReturnService
     {
-        public List<Return> getReturns();
+        public List<Return> GetReturns();
         public Return GetReturnById(Guid? id);
         public Return CreateNewReturn(Return r);
         public Return DeleteReturn(Guid id);
-
+        public List<Return> GetMyReturns(string userId);
         public Return UpdateReturn(Return r);
     }
 }

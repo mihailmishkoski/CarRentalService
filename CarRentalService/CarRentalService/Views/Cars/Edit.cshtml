@@ -12,43 +12,53 @@
     <div class="col-md-4">
         <form asp-action="Edit">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
             <div class="form-group">
                 <label asp-for="Name" class="control-label"></label>
                 <input asp-for="Name" class="form-control" />
                 <span asp-validation-for="Name" class="text-danger"></span>
             </div>
+
             <div class="form-group">
                 <label asp-for="Description" class="control-label"></label>
                 <input asp-for="Description" class="form-control" />
                 <span asp-validation-for="Description" class="text-danger"></span>
             </div>
+
             <div class="form-group">
                 <label asp-for="Model" class="control-label"></label>
                 <input asp-for="Model" class="form-control" />
                 <span asp-validation-for="Model" class="text-danger"></span>
             </div>
+
             <div class="form-group">
                 <label asp-for="DateManufactured" class="control-label"></label>
                 <input asp-for="DateManufactured" class="form-control" />
                 <span asp-validation-for="DateManufactured" class="text-danger"></span>
             </div>
+
             <div class="form-group">
                 <label asp-for="KilometersTraveled" class="control-label"></label>
                 <input asp-for="KilometersTraveled" class="form-control" />
                 <span asp-validation-for="KilometersTraveled" class="text-danger"></span>
             </div>
+
+            <!-- Color dropdown -->
             <div class="form-group">
                 <label asp-for="Color" class="control-label"></label>
-                <select asp-for="Color" class="form-control"></select>
+                <select asp-for="Color" class="form-control" asp-items="ViewBag.ColorOptions"></select>
                 <span asp-validation-for="Color" class="text-danger"></span>
             </div>
+
             <div class="form-group">
                 <label asp-for="LicensePlate" class="control-label"></label>
                 <input asp-for="LicensePlate" class="form-control" />
                 <span asp-validation-for="LicensePlate" class="text-danger"></span>
             </div>
 
+            <!-- Hidden ID field -->
             <input type="hidden" asp-for="Id" />
+
             <div class="form-group">
                 <input type="submit" value="Save" class="btn btn-primary" />
             </div>
@@ -61,5 +71,7 @@
 </div>
 
 @section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
 }

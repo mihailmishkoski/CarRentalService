@@ -33,47 +33,45 @@
             <th>
                 @Html.DisplayNameFor(model => model.LicensePlate)
             </th>
-            <th>
-                @Html.DisplayNameFor(model => model.IsAvailable)
-            </th>
+            
             <th></th>
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
+        @foreach (var item in Model)
+        {
 
-            <tr class="@(item.IsAvailable.Value ? true : "text-muted")">
-            <td>
-                @Html.DisplayFor(modelItem => item.Name)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Description)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Model)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.DateManufactured)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.KilometersTraveled)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Color)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.LicensePlate)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.IsAvailable)
-            </td>
-            <td>
-                <a asp-action="Create" asp-controller="Rents" asp-route-id="@item.Id" class="btn btn-primary @(item.IsAvailable.Value ? true : "disabled")">Rent</a> |
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
-            </td>
-        </tr>
-}
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Description)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Model)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DateManufactured)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.KilometersTraveled)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Color)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.LicensePlate)
+                </td>
+            
+                <td>
+                    
+                    <a asp-action="Create" asp-controller="Rents" asp-route-id="@item.Id" class="btn btn-primary">Rent</a> |
+                    <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                </td>
+            </tr>
+        }
     </tbody>
 </table>

@@ -1,6 +1,7 @@
 ﻿using CarRentalService.Domain.Models;
 using CarRentalService.Repository.Interface;
 using CarRentalService.Service.Interface;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,14 +20,9 @@ namespace CarRentalService.Service.Implementation
             this.carRepository = carRepository;
         }
 
-        public bool AvailableCheck(Guid ?id)
-        {
-            return carRepository.Get(id).IsAvailable == true;
-        }
 
         public void CreateNewCar(Car c)
         {
-            c.IsAvailable = true;
             carRepository.Insert(c);
         }
 
@@ -47,23 +43,12 @@ namespace CarRentalService.Service.Implementation
             return carRepository.GetAll().ToList();
         }
 
-        public void SetCarAsAvailable(Guid? id)
-        {
-            Car car = carRepository.Get(id);
-            car.IsAvailable = true;
-            carRepository.Update(car);
-        }
+        
 
-        public void SetCarAsUnavailable(Guid? id)
+        public Car UpdateCar(Car car)
         {
-            Car car = carRepository.Get(id);
-            car.IsAvailable = false;
-            carRepository.Update(car);
+            return carRepository.Update(car);
         }
-
-        public Car UpdateCar(Car id)
-        {
-            return carRepository.Update(id);
-        }
+        
     }
 }

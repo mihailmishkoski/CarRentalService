@@ -1,4 +1,5 @@
-﻿using CarRentalService.Domain.Models.Identity;
+﻿using CarRentalService.Domain.Models;
+using CarRentalService.Domain.Models.Identity;
 using CarRentalService.Repository.Interface;
 using CarRentalService.Service.Interface;
 using System;
@@ -21,6 +22,11 @@ namespace CarRentalService.Service.Implementation
         public Customer GetCustomerById(string id)
         {
             return _userRepository.GetCustomerById(id);
+        }
+
+        public List<Rent> GetMyRents(string id)
+        {
+            return _userRepository.GetMyRents(id);
         }
     }
 }

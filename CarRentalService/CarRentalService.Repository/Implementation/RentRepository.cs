@@ -23,7 +23,10 @@ namespace CarRentalService.Repository.Implementation
         {
             return entities.Include(r => r.Car).ToList();
         }
-
+        public List<Rent> GetAllActiveRents(Guid carId)
+        {
+            return entities.Where(r => r.isActive == true && r.CarId == carId).Include(r => r.Car).ToList();
+        }
         public Rent GetDetailsForRent(Guid ?id)
         {
             return entities.Include(r => r.Customer).Include(r => r.Car).

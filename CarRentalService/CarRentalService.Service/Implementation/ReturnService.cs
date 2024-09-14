@@ -12,14 +12,21 @@ namespace CarRentalService.Service.Implementation
     public class ReturnService : IReturnService
     {
         private readonly IRepository<Return> returnRepository;
+        private readonly IUserRepository userRepository;
+        private readonly IRentService rentService;
 
-        public ReturnService(IRepository<Return> returnRepository)
+        public ReturnService(IRepository<Return> returnRepository, IRentService rentService, IUserRepository userRepository)
         {
             this.returnRepository = returnRepository;
+            this.rentService = rentService;
+            this.userRepository = userRepository;
         }
 
         public Return CreateNewReturn(Return r)
         {
+            var rent = rentService.ReleaseRent(r.RentId);
+            int totalDays = (DateTime.Now.AddDays(1) - rent.RentDate).Days;
+            r.TotalPrice = totalDays * rent.RentAmount + r.LateFee;
             return returnRepository.Insert(r);
         }
 
@@ -30,12 +37,17 @@ namespace CarRentalService.Service.Implementation
             return r;
         }
 
+        public List<Return> GetMyReturns(string userId)
+        {
+            return userRepository.GetMyReturns(userId);
+        }
+
         public Return GetReturnById(Guid? id)
         {
             return returnRepository.Get(id);
         }
 
-        public List<Return> getReturns()
+        public List<Return> GetReturns()
         {
             return returnRepository.GetAll().ToList();
         }

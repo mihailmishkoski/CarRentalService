@@ -1,53 +1,76 @@
 ﻿@model IEnumerable<CarRentalService.Domain.Models.Rent>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = ViewBag.Title;
 }
 
-<h1>Index</h1>
+<div class="container mt-4">
+    <h1 class="text-center">@ViewBag.Title</h1>
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.RentDate)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.ReturnDate)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.RentAmount)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Car)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.RentDate)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ReturnDate)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.RentAmount)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Car.Name)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
-            </td>
-        </tr>
-}
-    </tbody>
-</table>
+    <div class="d-flex justify-content-between align-items-center my-3">
+        <h3>List of Rents</h3>
+    </div>
+
+    <table class="table table-striped table-bordered table-hover">
+        <thead class="thead-dark">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.RentDate)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ReturnDate)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.RentAmount)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Car)
+                </th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.RentDate)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ReturnDate)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.RentAmount)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Car.Name)
+                    </td>
+                    <td>
+                        <div class="btn-group" role="group">
+                            @if (item.isActive == true)
+                            {
+                                <a asp-action="Create" asp-controller="Returns" asp-route-rentId="@item.Id" class="btn btn-success">Return</a>
+                            }
+                            else
+                            {
+                                <button class="btn btn-secondary" disabled>Return</button>
+                            }
+
+                            @if (item.isActive == true)
+                            {
+                                <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-primary">Edit</a>
+                            }
+                            else
+                            {
+                                <button class="btn btn-secondary" disabled>Edit</button>
+                            }
+
+                            <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-info">Details</a>
+                            <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger">Delete</a>
+                        </div>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

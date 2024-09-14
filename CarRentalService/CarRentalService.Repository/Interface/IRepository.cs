@@ -15,5 +15,6 @@ namespace CarRentalService.Repository.Interface
         List<T> InsertMany(List<T> entities);
         T Update(T entity);
         T Delete(T entity);
+
     }
 }

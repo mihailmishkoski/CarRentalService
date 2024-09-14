@@ -4,54 +4,54 @@
     ViewData["Title"] = "Create";
     var car = ViewBag.Car as CarRentalService.Domain.Models.Car;
     var customer = ViewBag.Customer as CarRentalService.Domain.Models.Identity.Customer;
+    var errorMessage = ViewData["ErrorMessage"] as string;
 }
 
-<h1>Car Rental Service</h1>
+<h1>Create Rent</h1>
 
-<h4>Rent</h4>
-<hr />
-<div class="row">
-    <div class="col-md-4">
-        <form asp-action="Create">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
-                <label class="control-label">Customer</label>
-                <input class="form-control" value="@customer.FirstName" disabled />
-                <input type="hidden" asp-for="CustomerId" value="@customer.Id" />
-            </div>
-            <div class="form-group">
-                <label class="control-label">Car</label>
-                <input class="form-control" value="@car.Name" disabled />
-                <input type="hidden" asp-for="CarId" value="@car.Id" />
-            </div>
-            <div class="form-group">
-                <label asp-for="RentDate" class="control-label"></label>
-                <input asp-for="RentDate" class="form-control" />
-                <span asp-validation-for="RentDate" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="ReturnDate" class="control-label"></label>
-                <input asp-for="ReturnDate" class="form-control" />
-                <span asp-validation-for="ReturnDate" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="RentAmount" class="control-label"></label>
-                <input asp-for="RentAmount" class="form-control" />
-                <span asp-validation-for="RentAmount" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
-            </div>
-        </form>
+@if (!string.IsNullOrEmpty(errorMessage))
+{
+    <div class="alert alert-danger">
+        @errorMessage
     </div>
-</div>
-
-<div>
-    <a asp-action="Index">Back to List</a>
-</div>
-
-@section Scripts {
-    @{
-        await Html.RenderPartialAsync("_ValidationScriptsPartial");
-    }
 }
+<form asp-action="Create">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+    <div class="form-group">
+        <label class="control-label">Car</label>
+        <input class="form-control" value="@car.Description" disabled />
+        <input type="hidden" asp-for="CarId" value="@car.Id" />
+    </div>
+
+    <div class="form-group">
+        <label class="control-label">Customer</label>
+        <input class="form-control" value="@customer.FirstName" disabled />
+        <input type="hidden" asp-for="CustomerId" value="@customer.Id" />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="RentDate" class="control-label"></label>
+        <input asp-for="RentDate" class="form-control" />
+        <span asp-validation-for="RentDate" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="ReturnDate" class="control-label"></label>
+        <input asp-for="ReturnDate" class="form-control" />
+        <span asp-validation-for="ReturnDate" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="RentAmount" class="control-label"></label>
+        <input asp-for="RentAmount" class="form-control" />
+        <span asp-validation-for="RentAmount" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <input type="submit" value="Create" class="btn btn-primary" />
+    </div>
+    
+</form>
+
+<a asp-action="Index">Back to List</a>

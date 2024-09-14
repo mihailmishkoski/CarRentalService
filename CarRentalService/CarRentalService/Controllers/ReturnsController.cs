@@ -7,34 +7,50 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using CarRentalService.Domain.Models;
 using CarRentalService.Repository;
+using CarRentalService.Service.Interface;
+using Microsoft.AspNetCore.Authorization;
+using System.Security.Claims;
 
 namespace CarRentalService.Web.Controllers
 {
+    [Authorize]
     public class ReturnsController : Controller
     {
-        private readonly ApplicationDbContext _context;
 
-        public ReturnsController(ApplicationDbContext context)
+        private readonly IReturnService _returnService;
+
+        private readonly IRentService _rentService;
+
+        private readonly IRentParamsService _rentParamsService;
+        public ReturnsController(IReturnService returnService, IRentService rentService, IRentParamsService rentParamsService)
         {
-            _context = context;
+            _returnService = returnService;
+            _rentService = rentService;
+            _rentParamsService = rentParamsService;
         }
 
         // GET: Returns
-        public async Task<IActionResult> Index()
+        [Authorize(Roles = "Admin")]
+        public IActionResult Index()
         {
-            return View(await _context.Returns.ToListAsync());
+            return View(_returnService.GetReturns());
         }
-
+        // GET: Returns
+        public IActionResult MyReturns()
+        {
+            string? customerId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            return View("Index", _returnService.GetMyReturns(customerId));
+        }
         // GET: Returns/Details/5
-        public async Task<IActionResult> Details(Guid? id)
+        [Authorize(Roles = "Admin")]
+        public IActionResult Details(Guid? id)
         {
             if (id == null)
             {
                 return NotFound();
             }
 
-            var @return = await _context.Returns
-                .FirstOrDefaultAsync(m => m.Id == id);
+            var @return = _returnService.GetReturnById(id);
             if (@return == null)
             {
                 return NotFound();
@@ -44,9 +60,21 @@ namespace CarRentalService.Web.Controllers
         }
 
         // GET: Returns/Create
-        public IActionResult Create()
+        
+        public IActionResult Create(Guid rentId)
         {
-            return View();
+            var rentParams = _rentParamsService.GetRentParams();
+
+            var rent = _rentService.GetRentById(rentId);
+            var returnModel = new Return
+            {
+                RentId = rent.Id,
+                Rent = rent,
+                ReturnDate = DateTime.Now,
+                LateFee = _rentParamsService.CalculateLateFee(rent, DateTime.Now, rentParams.AdditionalFees)
+            };
+
+            return View(returnModel);
         }
 
         // POST: Returns/Create
@@ -54,32 +82,50 @@ namespace CarRentalService.Web.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("RentId,ReturnDate,LateFee,Id")] Return @return)
+        
+        public IActionResult Create([Bind("RentId,ReturnDate,LateFee")] Return @return)
         {
             if (ModelState.IsValid)
             {
-                @return.Id = Guid.NewGuid();
-                _context.Add(@return);
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                _returnService.CreateNewReturn(@return);
+                if (User.IsInRole("Admin"))
+                {
+                    // Redirect to the Returns Index if the user is an admin
+                    return RedirectToAction(nameof(Index));
+                }
+                else
+                {
+                    // Redirect to the Cars controller's Index if the user is not an admin
+                    return RedirectToAction("Index", "Cars");
+                }
             }
+
             return View(@return);
         }
 
         // GET: Returns/Edit/5
-        public async Task<IActionResult> Edit(Guid? id)
+        [Authorize(Roles = "Admin")]
+        public IActionResult Edit(Guid? id)
         {
             if (id == null)
             {
                 return NotFound();
             }
 
-            var @return = await _context.Returns.FindAsync(id);
+            var @return = _returnService.GetReturnById(id);
             if (@return == null)
             {
                 return NotFound();
             }
-            return View(@return);
+            var rent = _rentService.GetRentById(@return.RentId);
+            var returnModel = new Return
+            {
+                RentId = rent.Id,
+                Rent = rent,
+                ReturnDate = (DateTime)rent.ReturnDate,
+                LateFee = @return.LateFee
+            };
+            return View(returnModel);
         }
 
         // POST: Returns/Edit/5
@@ -87,7 +133,8 @@ namespace CarRentalService.Web.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(Guid id, [Bind("RentId,ReturnDate,LateFee,Id")] Return @return)
+        [Authorize(Roles = "Admin")]
+        public IActionResult Edit(Guid id, [Bind("RentId,ReturnDate,LateFee,Id")] Return @return)
         {
             if (id != @return.Id)
             {
@@ -96,10 +143,11 @@ namespace CarRentalService.Web.Controllers
 
             if (ModelState.IsValid)
             {
+                var OldReturn = _returnService.GetReturnById(id);
+                @return.TotalPrice = OldReturn.TotalPrice;
                 try
                 {
-                    _context.Update(@return);
-                    await _context.SaveChangesAsync();
+                    _returnService.UpdateReturn(@return);
                 }
                 catch (DbUpdateConcurrencyException)
                 {
@@ -118,15 +166,15 @@ namespace CarRentalService.Web.Controllers
         }
 
         // GET: Returns/Delete/5
-        public async Task<IActionResult> Delete(Guid? id)
+        [Authorize(Roles = "Admin")]
+        public IActionResult Delete(Guid? id)
         {
             if (id == null)
             {
                 return NotFound();
             }
 
-            var @return = await _context.Returns
-                .FirstOrDefaultAsync(m => m.Id == id);
+            var @return = _returnService.GetReturnById(id);
             if (@return == null)
             {
                 return NotFound();
@@ -138,21 +186,20 @@ namespace CarRentalService.Web.Controllers
         // POST: Returns/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeleteConfirmed(Guid id)
+        [Authorize(Roles = "Admin")]
+        public IActionResult DeleteConfirmed(Guid id)
         {
-            var @return = await _context.Returns.FindAsync(id);
+            var @return = _returnService.GetReturnById(id);
             if (@return != null)
             {
-                _context.Returns.Remove(@return);
+                _rentService.DeleteRent(id);
             }
-
-            await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
         private bool ReturnExists(Guid id)
         {
-            return _context.Returns.Any(e => e.Id == id);
+            return _returnService.GetReturnById(id) != null;
         }
     }
 }

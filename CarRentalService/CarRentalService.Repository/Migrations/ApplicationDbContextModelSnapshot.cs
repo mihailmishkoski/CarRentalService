@@ -17,7 +17,7 @@ namespace CarRentalService.Repository.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "8.0.7")
+                .HasAnnotation("ProductVersion", "8.0.8")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
@@ -37,9 +37,6 @@ namespace CarRentalService.Repository.Migrations
                     b.Property<string>("Description")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
-
-                    b.Property<bool?>("IsAvailable")
-                        .HasColumnType("bit");
 
                     b.Property<int>("KilometersTraveled")
                         .HasColumnType("int");
@@ -155,8 +152,11 @@ namespace CarRentalService.Repository.Migrations
                     b.Property<DateTime>("RentDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<DateTime?>("ReturnDate")
+                    b.Property<DateTime>("ReturnDate")
                         .HasColumnType("datetime2");
+
+                    b.Property<bool?>("isActive")
+                        .HasColumnType("bit");
 
                     b.HasKey("Id");
 
@@ -165,6 +165,26 @@ namespace CarRentalService.Repository.Migrations
                     b.HasIndex("CustomerId");
 
                     b.ToTable("Rents");
+                });
+
+            modelBuilder.Entity("CarRentalService.Domain.Models.RentParams", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<decimal>("AdditionalFees")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<decimal>("DiscountPercentage")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<int>("MinimumDaysForRent")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("RentParam");
                 });
 
             modelBuilder.Entity("CarRentalService.Domain.Models.Return", b =>
@@ -181,6 +201,9 @@ namespace CarRentalService.Repository.Migrations
 
                     b.Property<DateTime>("ReturnDate")
                         .HasColumnType("datetime2");
+
+                    b.Property<decimal?>("TotalPrice")
+                        .HasColumnType("decimal(18,2)");
 
                     b.HasKey("Id");
 
@@ -342,11 +365,13 @@ namespace CarRentalService.Repository.Migrations
 
             modelBuilder.Entity("CarRentalService.Domain.Models.Return", b =>
                 {
-                    b.HasOne("CarRentalService.Domain.Models.Rent", null)
+                    b.HasOne("CarRentalService.Domain.Models.Rent", "Rent")
                         .WithOne("Return")
                         .HasForeignKey("CarRentalService.Domain.Models.Return", "RentId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.Navigation("Rent");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>

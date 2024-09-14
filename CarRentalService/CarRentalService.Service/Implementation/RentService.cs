@@ -1,6 +1,7 @@
 ﻿using CarRentalService.Domain.Models;
 using CarRentalService.Repository.Interface;
 using CarRentalService.Service.Interface;
+using CarRentalService.Domain.Models.Exceptions;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,22 +15,33 @@ namespace CarRentalService.Service.Implementation
         private readonly IRepository<Rent> rentRepository;
         private readonly IRentRepository _rentRepository;
         private readonly ICarService carService;
-        public RentService(IRepository<Rent> rentRepository, ICarService carService, IRentRepository _rentRepository)
+        private readonly IRentParamsService paramsService;
+        public RentService(IRepository<Rent> rentRepository, ICarService carService, IRentRepository _rentRepository, IRentParamsService paramsService)
         {
             this.rentRepository = rentRepository;
             this.carService = carService;
             this._rentRepository = _rentRepository;
+            this.paramsService = paramsService;
         }
-        public void CreateNewRent(Rent r, string customerId)
+        public Rent CreateNewRent(Rent r, string customerId)
         {
-            if (carService.AvailableCheck(r.CarId))
+            if (IsRentPeriodOverlapping(r.RentDate, r.ReturnDate, r.CarId))
             {
-                carService.SetCarAsUnavailable(r.CarId);
-                r.CustomerId = customerId;
-                rentRepository.Insert(r);
+                throw new CarNotAvailableException("The car is not available in the selected time interval.");
             }
-            //else return exception
+            var rentParams = paramsService.GetRentParams();
+            int minDaysForReservation = rentParams.MinimumDaysForRent;  
+            int rentalDays = (r.ReturnDate - r.RentDate).Days;
+            if (rentalDays < minDaysForReservation)
+            {
+                throw new RentNotAvailableException($"The rental period must be at least {minDaysForReservation} days.");
+            }
+            r.isActive = true;
+            r.CustomerId = customerId;
+            return rentRepository.Insert(r);
         }
+
+        
 
         /// <summary>
         /// Deletes a rent and sets the associated car as available.This is an atomic operation, 
@@ -43,7 +55,6 @@ namespace CarRentalService.Service.Implementation
             try 
             {
                 rentRepository.Delete(rent);
-                carService.SetCarAsAvailable(rent.CarId);
             }
             catch 
             {
@@ -60,6 +71,36 @@ namespace CarRentalService.Service.Implementation
         public List<Rent> GetRents()
         {
             return _rentRepository.GetAllRents();
+        }
+
+        public bool IsRentPeriodOverlapping(DateTime fromDate, DateTime toDate, Guid carId)
+        {
+            var existingReservations = _rentRepository.GetAllActiveRents(carId);
+
+            
+            foreach (var reservation in existingReservations)
+            {
+                DateTime reservationStartDate = reservation.RentDate;
+                DateTime reservationEndDate = reservation.ReturnDate;
+
+                
+                if ((fromDate >= reservationStartDate && fromDate <= reservationEndDate) ||
+                    (toDate >= reservationStartDate && toDate <= reservationEndDate) ||
+                    (reservationStartDate >= fromDate && reservationStartDate <= toDate) ||
+                    (reservationEndDate >= fromDate && reservationEndDate <= toDate))
+                {
+                    
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        public Rent ReleaseRent(Guid? rentId)
+        {
+            Rent rent = rentRepository.Get(rentId);
+            rent.isActive = false;
+            return rentRepository.Update(rent);
         }
 
         public Rent UpdateRent(Rent rent)

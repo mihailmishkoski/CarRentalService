@@ -9,9 +9,12 @@ using CarRentalService.Domain.Models;
 using CarRentalService.Repository;
 using System.Runtime.ConstrainedExecution;
 using CarRentalService.Service.Interface;
+using Microsoft.AspNetCore.Authorization;
+
 
 namespace CarRentalService.Web.Controllers
 {
+    [Authorize]
     public class CarsController : Controller
     {
         private readonly ICarService carService;
@@ -45,6 +48,7 @@ namespace CarRentalService.Web.Controllers
         }
 
         // GET: Cars/Create
+        [Authorize(Roles = "Admin")]
         public IActionResult Create()
         {
             ViewBag.ColorOptions = new SelectList(Enum.GetValues(typeof(ColorVehicle)));
@@ -56,6 +60,7 @@ namespace CarRentalService.Web.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Admin")]
         public IActionResult Create([Bind("Name,Description,Model,DateManufactured,KilometersTraveled,Color,LicensePlate,Id")] Car car)
         {
             if (ModelState.IsValid)
@@ -67,6 +72,7 @@ namespace CarRentalService.Web.Controllers
         }
 
         // GET: Cars/Edit/5
+        [Authorize(Roles = "Admin")]
         public IActionResult Edit(Guid? id)
         {
             if (id == null)
@@ -79,6 +85,7 @@ namespace CarRentalService.Web.Controllers
             {
                 return NotFound();
             }
+            ViewBag.ColorOptions = new SelectList(Enum.GetValues(typeof(ColorVehicle)), car.Color);
             return View(car);
         }
 
@@ -87,7 +94,8 @@ namespace CarRentalService.Web.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Edit(Guid id, [Bind("Name,Description,Model,DateManufactured,KilometersTraveled,Color,LicensePlate,IsAvailable,Id")] Car car)
+        [Authorize(Roles = "Admin")]
+        public IActionResult Edit(Guid id, [Bind("Name,Description,Model,DateManufactured,KilometersTraveled,Color,LicensePlate,Id")] Car car)
         {
             if (id != car.Id)
             {
@@ -98,6 +106,7 @@ namespace CarRentalService.Web.Controllers
             {
                 try
                 {
+                    var existingCar = carService.GetCarById(id);
                     carService.UpdateCar(car);
                 }
                 catch (DbUpdateConcurrencyException)
@@ -117,6 +126,7 @@ namespace CarRentalService.Web.Controllers
         }
 
         // GET: Cars/Delete/5
+        [Authorize(Roles = "Admin")]
         public IActionResult Delete(Guid? id)
         {
             if (id == null)
@@ -136,6 +146,7 @@ namespace CarRentalService.Web.Controllers
         // POST: Cars/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Admin")]
         public IActionResult DeleteConfirmed(Guid id)
         {
             var car = carService.GetCarById(id);

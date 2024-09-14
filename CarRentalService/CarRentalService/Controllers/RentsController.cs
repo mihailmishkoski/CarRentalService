@@ -10,9 +10,12 @@ using CarRentalService.Repository;
 using CarRentalService.Service.Implementation;
 using System.Security.Claims;
 using CarRentalService.Service.Interface;
+using CarRentalService.Domain.Models.Exceptions;
+using Microsoft.AspNetCore.Authorization;
 
 namespace CarRentalService.Web.Controllers
 {
+    [Authorize]
     public class RentsController : Controller
     {
         private readonly IRentService rentService;
@@ -26,13 +29,23 @@ namespace CarRentalService.Web.Controllers
         }
 
         // GET: Rents
+        [Authorize(Roles = "Admin")]
         public IActionResult Index()
         {
-            
             var rents = rentService.GetRents();
+
+            ViewBag.Title = "All Rents";
             return View(rents);
         }
+        // GET: Rents
+        public IActionResult MyRents()
+        {
+            string? customerId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            var rents = userService.GetMyRents(customerId);
 
+            ViewBag.Title = "My Rents";
+            return View("Index", rents);
+        }
         // GET: Rents/Details/5
         public IActionResult Details(Guid id)
         {
@@ -46,13 +59,17 @@ namespace CarRentalService.Web.Controllers
         }
 
         // GET: Rents/Create
-        public IActionResult Create(Guid id)
+        public IActionResult Create(Guid id, string ?errorMessage)
         {
             var car = carService.GetCarById(id);
             string? customerId = User.FindFirstValue(ClaimTypes.NameIdentifier);
             var customer = userService.GetCustomerById(customerId);
             ViewData["Car"] = car;
             ViewData["Customer"] = customer;
+            if(errorMessage!=null)
+            {
+                ViewData["ErrorMessage"] = errorMessage;
+            }
             return View();
         }
 
@@ -61,16 +78,26 @@ namespace CarRentalService.Web.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Create([Bind("CarId,RentDate,ReturnDate,RentAmount,Id")] Rent rent)
+        public IActionResult Create([Bind("CarId,RentDate,ReturnDate,RentAmount")] Rent rent)
         {
             if (ModelState.IsValid)
             {
-                string ?customerId = User.FindFirstValue(ClaimTypes.NameIdentifier);
-                rentService.CreateNewRent(rent,customerId);
+                string? customerId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+                try
+                {
+                    rentService.CreateNewRent(rent, customerId);
+                }
+                catch (CarNotAvailableException ex)
+                {
+                    return RedirectToAction("Create", new { id = rent.CarId, errorMessage = ex.Message });
+                }
+                catch (RentNotAvailableException ex)
+                {
+                    return RedirectToAction("Create", new { id = rent.CarId, errorMessage = ex.Message });
+                }
                 return RedirectToAction("Index", "Cars");
             }
-            ViewData["CarId"] = new SelectList(carService.GetCars(), "Id", "Name", rent.CarId);
-            return View(rent);
+            else { return View(rent); }
         }
 
         // GET: Rents/Edit/5
@@ -100,6 +127,9 @@ namespace CarRentalService.Web.Controllers
 
             if (ModelState.IsValid)
             {
+                var existingRent = rentService.GetRentById(id);
+                rent.isActive = existingRent.isActive;
+                rent.CustomerId = existingRent.CustomerId;
                 try
                 {
                     rentService.UpdateRent(rent);
@@ -122,6 +152,7 @@ namespace CarRentalService.Web.Controllers
         }
 
         // GET: Rents/Delete/5
+        [Authorize(Roles = "Admin")]
         public IActionResult Delete(Guid id)
         {
             if (id == null)
@@ -141,6 +172,7 @@ namespace CarRentalService.Web.Controllers
         // POST: Rents/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Admin")]
         public IActionResult DeleteConfirmed(Guid id)
         {
             rentService.DeleteRent(id);

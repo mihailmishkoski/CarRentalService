@@ -9,7 +9,10 @@ namespace CarRentalService.Domain.Models
     public class Return : BaseEnum
     {
         public Guid RentId { get; set; }
+
+        public Rent ?Rent { get; set; }
         public DateTime ReturnDate { get; set; }
         public int? LateFee { get; set; }
+        public decimal? TotalPrice { get; set; }
     }
 }

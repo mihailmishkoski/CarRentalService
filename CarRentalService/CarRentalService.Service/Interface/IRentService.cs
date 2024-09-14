@@ -11,9 +11,12 @@ namespace CarRentalService.Service.Interface
     {
         public List<Rent> GetRents();
         public Rent GetRentById(Guid id);
-        public void CreateNewRent(Rent r, string customerId);
+        public Rent CreateNewRent(Rent r, string customerId);
         public Rent DeleteRent(Guid ?id);
 
         public Rent UpdateRent(Rent rent);
+        Rent ReleaseRent(Guid? rentId);
+
+        bool IsRentPeriodOverlapping(DateTime fromDate, DateTime toDate, Guid carId);
     }
 }
