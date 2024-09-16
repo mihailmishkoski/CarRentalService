@@ -3,32 +3,20 @@
   "WorkspaceRootPath": "D:\\Web Projects\\CarRentalService\\CarRentalService\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{774A7D95-3166-4DBD-8661-A19F74773FA5}|CarRentalService\\CarRentalService.Web.csproj|d:\\web projects\\carrentalservice\\carrentalservice\\carrentalservice\\controllers\\rentparameterscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{774A7D95-3166-4DBD-8661-A19F74773FA5}|CarRentalService\\CarRentalService.Web.csproj|solutionrelative:carrentalservice\\controllers\\rentparameterscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{774A7D95-3166-4DBD-8661-A19F74773FA5}|CarRentalService\\CarRentalService.Web.csproj|d:\\web projects\\carrentalservice\\carrentalservice\\carrentalservice\\controllers\\rentparamscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{774A7D95-3166-4DBD-8661-A19F74773FA5}|CarRentalService\\CarRentalService.Web.csproj|solutionrelative:carrentalservice\\controllers\\rentparamscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{774A7D95-3166-4DBD-8661-A19F74773FA5}|CarRentalService\\CarRentalService.Web.csproj|d:\\web projects\\carrentalservice\\carrentalservice\\carrentalservice\\controllers\\returnscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{774A7D95-3166-4DBD-8661-A19F74773FA5}|CarRentalService\\CarRentalService.Web.csproj|solutionrelative:carrentalservice\\controllers\\returnscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{774A7D95-3166-4DBD-8661-A19F74773FA5}|CarRentalService\\CarRentalService.Web.csproj|d:\\web projects\\carrentalservice\\carrentalservice\\carrentalservice\\controllers\\rentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{774A7D95-3166-4DBD-8661-A19F74773FA5}|CarRentalService\\CarRentalService.Web.csproj|solutionrelative:carrentalservice\\controllers\\rentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{774A7D95-3166-4DBD-8661-A19F74773FA5}|CarRentalService\\CarRentalService.Web.csproj|d:\\web projects\\carrentalservice\\carrentalservice\\carrentalservice\\controllers\\carscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{774A7D95-3166-4DBD-8661-A19F74773FA5}|CarRentalService\\CarRentalService.Web.csproj|solutionrelative:carrentalservice\\controllers\\carscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{774A7D95-3166-4DBD-8661-A19F74773FA5}|CarRentalService\\CarRentalService.Web.csproj|d:\\web projects\\carrentalservice\\carrentalservice\\carrentalservice\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{774A7D95-3166-4DBD-8661-A19F74773FA5}|CarRentalService\\CarRentalService.Web.csproj|solutionrelative:carrentalservice\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{03122643-A9CE-49E0-AAB9-E02273FE291D}|CarRentalService.Service\\CarRentalService.Service.csproj|d:\\web projects\\carrentalservice\\carrentalservice\\carrentalservice.service\\implementation\\rentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{03122643-A9CE-49E0-AAB9-E02273FE291D}|CarRentalService.Service\\CarRentalService.Service.csproj|solutionrelative:carrentalservice.service\\implementation\\rentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{774A7D95-3166-4DBD-8661-A19F74773FA5}|CarRentalService\\CarRentalService.Web.csproj|d:\\web projects\\carrentalservice\\carrentalservice\\carrentalservice\\controllers\\api\\apicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{774A7D95-3166-4DBD-8661-A19F74773FA5}|CarRentalService\\CarRentalService.Web.csproj|solutionrelative:carrentalservice\\controllers\\api\\apicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{774A7D95-3166-4DBD-8661-A19F74773FA5}|CarRentalService\\CarRentalService.Web.csproj|d:\\web projects\\carrentalservice\\carrentalservice\\carrentalservice\\views\\cars\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{774A7D95-3166-4DBD-8661-A19F74773FA5}|CarRentalService\\CarRentalService.Web.csproj|solutionrelative:carrentalservice\\views\\cars\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{774A7D95-3166-4DBD-8661-A19F74773FA5}|CarRentalService\\CarRentalService.Web.csproj|d:\\web projects\\carrentalservice\\carrentalservice\\carrentalservice\\controllers\\rentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{774A7D95-3166-4DBD-8661-A19F74773FA5}|CarRentalService\\CarRentalService.Web.csproj|solutionrelative:carrentalservice\\controllers\\rentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -66,67 +54,41 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "RentParamsController.cs",
-              "DocumentMoniker": "D:\\Web Projects\\CarRentalService\\CarRentalService\\CarRentalService\\Controllers\\RentParamsController.cs",
-              "RelativeDocumentMoniker": "CarRentalService\\Controllers\\RentParamsController.cs",
-              "ToolTip": "D:\\Web Projects\\CarRentalService\\CarRentalService\\CarRentalService\\Controllers\\RentParamsController.cs",
-              "RelativeToolTip": "CarRentalService\\Controllers\\RentParamsController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-14T20:44:28.141Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "RentParametersController.cs",
-              "DocumentMoniker": "D:\\Web Projects\\CarRentalService\\CarRentalService\\CarRentalService\\Controllers\\RentParametersController.cs",
-              "RelativeDocumentMoniker": "CarRentalService\\Controllers\\RentParametersController.cs",
-              "ToolTip": "D:\\Web Projects\\CarRentalService\\CarRentalService\\CarRentalService\\Controllers\\RentParametersController.cs*",
-              "RelativeToolTip": "CarRentalService\\Controllers\\RentParametersController.cs*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAPAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-14T20:44:17.583Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ReturnsController.cs",
-              "DocumentMoniker": "D:\\Web Projects\\CarRentalService\\CarRentalService\\CarRentalService\\Controllers\\ReturnsController.cs",
-              "RelativeDocumentMoniker": "CarRentalService\\Controllers\\ReturnsController.cs",
-              "ToolTip": "D:\\Web Projects\\CarRentalService\\CarRentalService\\CarRentalService\\Controllers\\ReturnsController.cs",
-              "RelativeToolTip": "CarRentalService\\Controllers\\ReturnsController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-14T20:44:11.006Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\Web Projects\\CarRentalService\\CarRentalService\\CarRentalService\\Program.cs",
               "RelativeDocumentMoniker": "CarRentalService\\Program.cs",
               "ToolTip": "D:\\Web Projects\\CarRentalService\\CarRentalService\\CarRentalService\\Program.cs",
               "RelativeToolTip": "CarRentalService\\Program.cs",
-              "ViewState": "AgIAADAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-14T20:44:06.681Z",
+              "WhenOpened": "2024-09-16T12:21:57.104Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "RentService.cs",
-              "DocumentMoniker": "D:\\Web Projects\\CarRentalService\\CarRentalService\\CarRentalService.Service\\Implementation\\RentService.cs",
-              "RelativeDocumentMoniker": "CarRentalService.Service\\Implementation\\RentService.cs",
-              "ToolTip": "D:\\Web Projects\\CarRentalService\\CarRentalService\\CarRentalService.Service\\Implementation\\RentService.cs",
-              "RelativeToolTip": "CarRentalService.Service\\Implementation\\RentService.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\Web Projects\\CarRentalService\\CarRentalService\\CarRentalService\\Views\\Cars\\Index.cshtml",
+              "RelativeDocumentMoniker": "CarRentalService\\Views\\Cars\\Index.cshtml",
+              "ToolTip": "D:\\Web Projects\\CarRentalService\\CarRentalService\\CarRentalService\\Views\\Cars\\Index.cshtml",
+              "RelativeToolTip": "CarRentalService\\Views\\Cars\\Index.cshtml",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABQAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-09-16T12:18:46.976Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "APIController.cs",
+              "DocumentMoniker": "D:\\Web Projects\\CarRentalService\\CarRentalService\\CarRentalService\\Controllers\\API\\APIController.cs",
+              "RelativeDocumentMoniker": "CarRentalService\\Controllers\\API\\APIController.cs",
+              "ToolTip": "D:\\Web Projects\\CarRentalService\\CarRentalService\\CarRentalService\\Controllers\\API\\APIController.cs",
+              "RelativeToolTip": "CarRentalService\\Controllers\\API\\APIController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-14T20:41:10.983Z",
+              "WhenOpened": "2024-09-16T11:44:27.5Z",
               "EditorCaption": ""
             },
             {
@@ -137,22 +99,9 @@
               "RelativeDocumentMoniker": "CarRentalService\\Controllers\\RentsController.cs",
               "ToolTip": "D:\\Web Projects\\CarRentalService\\CarRentalService\\CarRentalService\\Controllers\\RentsController.cs",
               "RelativeToolTip": "CarRentalService\\Controllers\\RentsController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAEAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAJUAAAA5AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-14T20:37:24.815Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "CarsController.cs",
-              "DocumentMoniker": "D:\\Web Projects\\CarRentalService\\CarRentalService\\CarRentalService\\Controllers\\CarsController.cs",
-              "RelativeDocumentMoniker": "CarRentalService\\Controllers\\CarsController.cs",
-              "ToolTip": "D:\\Web Projects\\CarRentalService\\CarRentalService\\CarRentalService\\Controllers\\CarsController.cs",
-              "RelativeToolTip": "CarRentalService\\Controllers\\CarsController.cs",
-              "ViewState": "AgIAACYAAAAAAAAAAAAwwAsAAAApAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-14T20:37:07.483Z",
+              "WhenOpened": "2024-09-14T21:01:12.874Z",
               "EditorCaption": ""
             }
           ]

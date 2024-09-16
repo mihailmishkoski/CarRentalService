@@ -147,7 +147,7 @@ namespace CarRentalService.Web.Controllers
                         throw;
                     }
                 }
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction("Index", "Cars");
             }
             ViewData["CarId"] = new SelectList(carService.GetCars(), "Id", "Description", rent.CarId);
             return View(rent);

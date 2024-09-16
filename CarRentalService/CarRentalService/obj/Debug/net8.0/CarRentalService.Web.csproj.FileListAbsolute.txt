@@ -266,3 +266,7 @@ D:\Web Projects\CarRentalService\CarRentalService\CarRentalService\obj\Debug\net
 D:\Web Projects\CarRentalService\CarRentalService\CarRentalService\obj\Debug\net8.0\CarRentalService.Web.pdb
 D:\Web Projects\CarRentalService\CarRentalService\CarRentalService\obj\Debug\net8.0\CarRentalService.Web.genruntimeconfig.cache
 D:\Web Projects\CarRentalService\CarRentalService\CarRentalService\obj\Debug\net8.0\ref\CarRentalService.Web.dll
+D:\Web Projects\CarRentalService\CarRentalService\CarRentalService\bin\Debug\net8.0\Microsoft.AspNetCore.JsonPatch.dll
+D:\Web Projects\CarRentalService\CarRentalService\CarRentalService\bin\Debug\net8.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+D:\Web Projects\CarRentalService\CarRentalService\CarRentalService\bin\Debug\net8.0\Newtonsoft.Json.Bson.dll
+D:\Web Projects\CarRentalService\CarRentalService\CarRentalService\obj\Debug\net8.0\CarRentalService.Web.MvcApplicationPartsAssemblyInfo.cs
