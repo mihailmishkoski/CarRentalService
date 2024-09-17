@@ -18,3 +18,23 @@ D:\Web Projects\CarRentalService\CarRentalService\CarRentalService.Service\obj\D
 D:\Web Projects\CarRentalService\CarRentalService\CarRentalService.Service\obj\Debug\net8.0\CarRentalService.Service.pdb
 D:\Web Projects\CarRentalService\CarRentalService\CarRentalService.Service\obj\Debug\net8.0\CarRentalService.Service.genruntimeconfig.cache
 D:\Web Projects\CarRentalService\CarRentalService\CarRentalService.Service\obj\Debug\net8.0\ref\CarRentalService.Service.dll
+D:\FINKI\semestar 6\integrirani sistemi\project\CarRentalService\CarRentalService.Service\bin\Debug\net8.0\CarRentalService.Service.deps.json
+D:\FINKI\semestar 6\integrirani sistemi\project\CarRentalService\CarRentalService.Service\bin\Debug\net8.0\CarRentalService.Service.runtimeconfig.json
+D:\FINKI\semestar 6\integrirani sistemi\project\CarRentalService\CarRentalService.Service\bin\Debug\net8.0\CarRentalService.Service.dll
+D:\FINKI\semestar 6\integrirani sistemi\project\CarRentalService\CarRentalService.Service\bin\Debug\net8.0\CarRentalService.Service.pdb
+D:\FINKI\semestar 6\integrirani sistemi\project\CarRentalService\CarRentalService.Service\bin\Debug\net8.0\CarRentalService.Domain.dll
+D:\FINKI\semestar 6\integrirani sistemi\project\CarRentalService\CarRentalService.Service\bin\Debug\net8.0\CarRentalService.Repository.dll
+D:\FINKI\semestar 6\integrirani sistemi\project\CarRentalService\CarRentalService.Service\bin\Debug\net8.0\CarRentalService.Domain.pdb
+D:\FINKI\semestar 6\integrirani sistemi\project\CarRentalService\CarRentalService.Service\bin\Debug\net8.0\CarRentalService.Repository.pdb
+D:\FINKI\semestar 6\integrirani sistemi\project\CarRentalService\CarRentalService.Service\obj\Debug\net8.0\CarRentalService.Service.csproj.AssemblyReference.cache
+D:\FINKI\semestar 6\integrirani sistemi\project\CarRentalService\CarRentalService.Service\obj\Debug\net8.0\CarRentalService.Service.GeneratedMSBuildEditorConfig.editorconfig
+D:\FINKI\semestar 6\integrirani sistemi\project\CarRentalService\CarRentalService.Service\obj\Debug\net8.0\CarRentalService.Service.AssemblyInfoInputs.cache
+D:\FINKI\semestar 6\integrirani sistemi\project\CarRentalService\CarRentalService.Service\obj\Debug\net8.0\CarRentalService.Service.AssemblyInfo.cs
+D:\FINKI\semestar 6\integrirani sistemi\project\CarRentalService\CarRentalService.Service\obj\Debug\net8.0\CarRentalService.Service.csproj.CoreCompileInputs.cache
+D:\FINKI\semestar 6\integrirani sistemi\project\CarRentalService\CarRentalService.Service\obj\Debug\net8.0\CarRentalService.Service.sourcelink.json
+D:\FINKI\semestar 6\integrirani sistemi\project\CarRentalService\CarRentalService.Service\obj\Debug\net8.0\CarRenta.73E84A44.Up2Date
+D:\FINKI\semestar 6\integrirani sistemi\project\CarRentalService\CarRentalService.Service\obj\Debug\net8.0\CarRentalService.Service.dll
+D:\FINKI\semestar 6\integrirani sistemi\project\CarRentalService\CarRentalService.Service\obj\Debug\net8.0\refint\CarRentalService.Service.dll
+D:\FINKI\semestar 6\integrirani sistemi\project\CarRentalService\CarRentalService.Service\obj\Debug\net8.0\CarRentalService.Service.pdb
+D:\FINKI\semestar 6\integrirani sistemi\project\CarRentalService\CarRentalService.Service\obj\Debug\net8.0\CarRentalService.Service.genruntimeconfig.cache
+D:\FINKI\semestar 6\integrirani sistemi\project\CarRentalService\CarRentalService.Service\obj\Debug\net8.0\ref\CarRentalService.Service.dll

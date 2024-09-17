@@ -9,7 +9,8 @@ namespace CarRentalServiceAdmin.Controllers
         public IActionResult Index()
         {
             HttpClient client = new HttpClient();
-            string URL = "https://localhost:7144/api/API/GetAllCars";
+            //string URL = "https://localhost:7144/api/API/GetAllCars";
+            string URL = "https://carrentalserviceweb20240916170024.azurewebsites.net/api/API/GetAllCars";
 
             HttpResponseMessage response = client.GetAsync(URL).Result;
 
@@ -39,7 +40,9 @@ namespace CarRentalServiceAdmin.Controllers
 
                 // Fetch the list of cars (you can replace the URL with your actual API endpoint)
                 HttpClient client = new HttpClient();
-                string URL = "https://localhost:7144/api/API/GetAllCars";  // Change this to your actual API
+                // URL = "https://localhost:7144/api/API/GetAllCars";  // Change this to your actual API
+                string URL = "https://carrentalserviceweb20240916170024.azurewebsites.net/api/API/GetAllCars";
+
 
                 HttpResponseMessage response = client.GetAsync(URL).Result;
                 var data = response.Content.ReadAsAsync<List<Car>>().Result;  // Assuming the API returns a List<Car>

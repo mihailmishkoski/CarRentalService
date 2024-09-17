@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project>
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAczyYmf+PSEO931ZbVcJbpgAAAAACAAAAAAAQZgAAAAEAACAAAACmt0DRsfXT5exvi6fjKuoGOfbDyOdWsBmMojWVa8ndSQAAAAAOgAAAAAIAACAAAAAJr2YVAVmBqHUy/GIlMrTMAeRYxEeeimHwweGCFjkt64AAAACuQs46Rj6g7kR8WY0ST5i0k4xUkd1n8cTQHci8mwu8UY3yr/BvZRi4uWzEDHBGK8voS7OTq/6xY2x29NrRQbv7xtEPkVCWbRyyJi1I2G4sUuA1jPe8XT672k7HSoLoXuQBJp8cmMCCtFmx3CMR4mTT4MG+tVU84ir+Q7/yFunylkAAAAC6XMA4cl6ahZ9BOsszjpxN5ROJpRcTN9vTfyiMSjv2PbwAlo6pg1zQGzaUOYl8K/O1opjnrS2o6XkaG8LHpfFJ</EncryptedPassword>
+    <History>True|2024-09-16T15:48:00.9149800Z;True|2024-09-16T17:24:36.5802618+02:00;</History>
+    <LastFailureDetails />
+  </PropertyGroup>
+  <ItemGroup>
+    <DestinationConnectionStrings Include="ApplicationDbContextConnection">
+      <Value>Data Source=carrentalservicewebdbserver.database.windows.net,1433%3bInitial Catalog=CarRentalService.Web_db%3bUser ID=maki%3bPassword=Test123!</Value>
+    </DestinationConnectionStrings>
+  </ItemGroup>
+  <ItemGroup>
+    <EFMigrations Include="CarRentalService.Repository.ApplicationDbContext">
+      <Value>Data Source=carrentalservicewebdbserver.database.windows.net,1433%3bInitial Catalog=CarRentalService.Web_db%3bUser ID=maki%3bPassword=Test123!</Value>
+    </EFMigrations>
+  </ItemGroup>
+</Project>

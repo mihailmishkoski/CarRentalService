@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CarRentalServiceAdmin")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e9412e42422d878fbd43c7a9ae3a0faa286b26bd")]
 [assembly: System.Reflection.AssemblyProductAttribute("CarRentalServiceAdmin")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CarRentalServiceAdmin")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

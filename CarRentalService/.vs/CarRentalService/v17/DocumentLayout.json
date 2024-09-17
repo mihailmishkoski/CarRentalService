@@ -1,21 +1,33 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\Web Projects\\CarRentalService\\CarRentalService\\",
+  "WorkspaceRootPath": "D:\\FINKI\\semestar 6\\integrirani sistemi\\project\\CarRentalService\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{774A7D95-3166-4DBD-8661-A19F74773FA5}|CarRentalService\\CarRentalService.Web.csproj|d:\\web projects\\carrentalservice\\carrentalservice\\carrentalservice\\controllers\\api\\apicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{FBF3AAEC-7368-4688-BCF8-37BED0245481}|CarRentalService.Repository\\CarRentalService.Repository.csproj|d:\\finki\\semestar 6\\integrirani sistemi\\project\\carrentalservice\\carrentalservice.repository\\applicationdbcontextfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBF3AAEC-7368-4688-BCF8-37BED0245481}|CarRentalService.Repository\\CarRentalService.Repository.csproj|solutionrelative:carrentalservice.repository\\applicationdbcontextfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBF3AAEC-7368-4688-BCF8-37BED0245481}|CarRentalService.Repository\\CarRentalService.Repository.csproj|d:\\finki\\semestar 6\\integrirani sistemi\\project\\carrentalservice\\carrentalservice.repository\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBF3AAEC-7368-4688-BCF8-37BED0245481}|CarRentalService.Repository\\CarRentalService.Repository.csproj|solutionrelative:carrentalservice.repository\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{774A7D95-3166-4DBD-8661-A19F74773FA5}|CarRentalService\\CarRentalService.Web.csproj|d:\\finki\\semestar 6\\integrirani sistemi\\project\\carrentalservice\\carrentalservice\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{774A7D95-3166-4DBD-8661-A19F74773FA5}|CarRentalService\\CarRentalService.Web.csproj|solutionrelative:carrentalservice\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{774A7D95-3166-4DBD-8661-A19F74773FA5}|CarRentalService\\CarRentalService.Web.csproj|d:\\finki\\semestar 6\\integrirani sistemi\\project\\carrentalservice\\carrentalservice\\controllers\\api\\apicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{774A7D95-3166-4DBD-8661-A19F74773FA5}|CarRentalService\\CarRentalService.Web.csproj|solutionrelative:carrentalservice\\controllers\\api\\apicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{774A7D95-3166-4DBD-8661-A19F74773FA5}|CarRentalService\\CarRentalService.Web.csproj|d:\\web projects\\carrentalservice\\carrentalservice\\carrentalservice\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{774A7D95-3166-4DBD-8661-A19F74773FA5}|CarRentalService\\CarRentalService.Web.csproj|d:\\finki\\semestar 6\\integrirani sistemi\\project\\carrentalservice\\carrentalservice\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{774A7D95-3166-4DBD-8661-A19F74773FA5}|CarRentalService\\CarRentalService.Web.csproj|solutionrelative:carrentalservice\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{774A7D95-3166-4DBD-8661-A19F74773FA5}|CarRentalService\\CarRentalService.Web.csproj|d:\\web projects\\carrentalservice\\carrentalservice\\carrentalservice\\views\\cars\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{774A7D95-3166-4DBD-8661-A19F74773FA5}|CarRentalService\\CarRentalService.Web.csproj|d:\\finki\\semestar 6\\integrirani sistemi\\project\\carrentalservice\\carrentalservice\\views\\cars\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{774A7D95-3166-4DBD-8661-A19F74773FA5}|CarRentalService\\CarRentalService.Web.csproj|solutionrelative:carrentalservice\\views\\cars\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{774A7D95-3166-4DBD-8661-A19F74773FA5}|CarRentalService\\CarRentalService.Web.csproj|d:\\web projects\\carrentalservice\\carrentalservice\\carrentalservice\\controllers\\rentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{774A7D95-3166-4DBD-8661-A19F74773FA5}|CarRentalService\\CarRentalService.Web.csproj|d:\\finki\\semestar 6\\integrirani sistemi\\project\\carrentalservice\\carrentalservice\\controllers\\rentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{774A7D95-3166-4DBD-8661-A19F74773FA5}|CarRentalService\\CarRentalService.Web.csproj|solutionrelative:carrentalservice\\controllers\\rentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -26,19 +38,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:130:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
             },
             {
               "$type": "Bookmark",
@@ -50,59 +54,107 @@
             },
             {
               "$type": "Bookmark",
+              "Name": "ST:130:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
               "Name": "ST:0:0:{fbcae063-e2c0-4ab1-a516-996ea3dafb72}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ApplicationDbContextFactory.cs",
+              "DocumentMoniker": "D:\\FINKI\\semestar 6\\integrirani sistemi\\project\\CarRentalService\\CarRentalService.Repository\\ApplicationDbContextFactory.cs",
+              "RelativeDocumentMoniker": "CarRentalService.Repository\\ApplicationDbContextFactory.cs",
+              "ToolTip": "D:\\FINKI\\semestar 6\\integrirani sistemi\\project\\CarRentalService\\CarRentalService.Repository\\ApplicationDbContextFactory.cs*",
+              "RelativeToolTip": "CarRentalService.Repository\\ApplicationDbContextFactory.cs*",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAABaAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-16T14:08:10.658Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\Web Projects\\CarRentalService\\CarRentalService\\CarRentalService\\Program.cs",
-              "RelativeDocumentMoniker": "CarRentalService\\Program.cs",
-              "ToolTip": "D:\\Web Projects\\CarRentalService\\CarRentalService\\CarRentalService\\Program.cs",
-              "RelativeToolTip": "CarRentalService\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAAgAAAAAAAAAA==",
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "D:\\FINKI\\semestar 6\\integrirani sistemi\\project\\CarRentalService\\CarRentalService.Repository\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "CarRentalService.Repository\\ApplicationDbContext.cs",
+              "ToolTip": "D:\\FINKI\\semestar 6\\integrirani sistemi\\project\\CarRentalService\\CarRentalService.Repository\\ApplicationDbContext.cs",
+              "RelativeToolTip": "CarRentalService.Repository\\ApplicationDbContext.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-16T12:21:57.104Z",
+              "WhenOpened": "2024-09-16T14:08:04.41Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "D:\\Web Projects\\CarRentalService\\CarRentalService\\CarRentalService\\Views\\Cars\\Index.cshtml",
-              "RelativeDocumentMoniker": "CarRentalService\\Views\\Cars\\Index.cshtml",
-              "ToolTip": "D:\\Web Projects\\CarRentalService\\CarRentalService\\CarRentalService\\Views\\Cars\\Index.cshtml",
-              "RelativeToolTip": "CarRentalService\\Views\\Cars\\Index.cshtml",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABQAAAAQAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-09-16T12:18:46.976Z",
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\FINKI\\semestar 6\\integrirani sistemi\\project\\CarRentalService\\CarRentalService\\appsettings.json",
+              "RelativeDocumentMoniker": "CarRentalService\\appsettings.json",
+              "ToolTip": "D:\\FINKI\\semestar 6\\integrirani sistemi\\project\\CarRentalService\\CarRentalService\\appsettings.json",
+              "RelativeToolTip": "CarRentalService\\appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-09-16T14:07:54.005Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\FINKI\\semestar 6\\integrirani sistemi\\project\\CarRentalService\\CarRentalService\\Program.cs",
+              "RelativeDocumentMoniker": "CarRentalService\\Program.cs",
+              "ToolTip": "D:\\FINKI\\semestar 6\\integrirani sistemi\\project\\CarRentalService\\CarRentalService\\Program.cs",
+              "RelativeToolTip": "CarRentalService\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-16T12:21:57.104Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\FINKI\\semestar 6\\integrirani sistemi\\project\\CarRentalService\\CarRentalService\\Views\\Cars\\Index.cshtml",
+              "RelativeDocumentMoniker": "CarRentalService\\Views\\Cars\\Index.cshtml",
+              "ToolTip": "D:\\FINKI\\semestar 6\\integrirani sistemi\\project\\CarRentalService\\CarRentalService\\Views\\Cars\\Index.cshtml",
+              "RelativeToolTip": "CarRentalService\\Views\\Cars\\Index.cshtml",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABQAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-09-16T12:18:46.976Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "APIController.cs",
-              "DocumentMoniker": "D:\\Web Projects\\CarRentalService\\CarRentalService\\CarRentalService\\Controllers\\API\\APIController.cs",
+              "DocumentMoniker": "D:\\FINKI\\semestar 6\\integrirani sistemi\\project\\CarRentalService\\CarRentalService\\Controllers\\API\\APIController.cs",
               "RelativeDocumentMoniker": "CarRentalService\\Controllers\\API\\APIController.cs",
-              "ToolTip": "D:\\Web Projects\\CarRentalService\\CarRentalService\\CarRentalService\\Controllers\\API\\APIController.cs",
+              "ToolTip": "D:\\FINKI\\semestar 6\\integrirani sistemi\\project\\CarRentalService\\CarRentalService\\Controllers\\API\\APIController.cs",
               "RelativeToolTip": "CarRentalService\\Controllers\\API\\APIController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAdAAAAAAAAAA==",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-16T11:44:27.5Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 6,
               "Title": "RentsController.cs",
-              "DocumentMoniker": "D:\\Web Projects\\CarRentalService\\CarRentalService\\CarRentalService\\Controllers\\RentsController.cs",
+              "DocumentMoniker": "D:\\FINKI\\semestar 6\\integrirani sistemi\\project\\CarRentalService\\CarRentalService\\Controllers\\RentsController.cs",
               "RelativeDocumentMoniker": "CarRentalService\\Controllers\\RentsController.cs",
-              "ToolTip": "D:\\Web Projects\\CarRentalService\\CarRentalService\\CarRentalService\\Controllers\\RentsController.cs",
+              "ToolTip": "D:\\FINKI\\semestar 6\\integrirani sistemi\\project\\CarRentalService\\CarRentalService\\Controllers\\RentsController.cs",
               "RelativeToolTip": "CarRentalService\\Controllers\\RentsController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAJUAAAA5AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-14T21:01:12.874Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-14T21:01:12.874Z"
             }
           ]
         }

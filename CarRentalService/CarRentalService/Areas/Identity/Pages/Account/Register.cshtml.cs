@@ -128,11 +128,24 @@ namespace CarRentalService.Web.Areas.Identity.Pages.Account
                 user.FirstName = Input.FirstName;
                 user.LastName = Input.LastName;
                 user.DateOfBirth = Input.DateOfBirth;
+
                 var result = await _userManager.CreateAsync(user, Input.Password);
 
                 if (result.Succeeded)
                 {
                     _logger.LogInformation("User created a new account with password.");
+
+
+                    var roleAssignResult = await _userManager.AddToRoleAsync(user, "Admin");
+
+                    if (!roleAssignResult.Succeeded)
+                    {
+                        foreach (var error in roleAssignResult.Errors)
+                        {
+                            ModelState.AddModelError(string.Empty, error.Description);
+                        }
+                        return Page(); // Return the page in case role assignment fails.
+                    }
 
                     var userId = await _userManager.GetUserIdAsync(user);
                     var code = await _userManager.GenerateEmailConfirmationTokenAsync(user);

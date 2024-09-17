@@ -1,0 +1,15 @@
+D:\FINKI\semestar 6\integrirani sistemi\project\CarRentalService\CarRentalService.Domain\bin\Release\net8.0\CarRentalService.Domain.deps.json
+D:\FINKI\semestar 6\integrirani sistemi\project\CarRentalService\CarRentalService.Domain\bin\Release\net8.0\CarRentalService.Domain.runtimeconfig.json
+D:\FINKI\semestar 6\integrirani sistemi\project\CarRentalService\CarRentalService.Domain\bin\Release\net8.0\CarRentalService.Domain.dll
+D:\FINKI\semestar 6\integrirani sistemi\project\CarRentalService\CarRentalService.Domain\bin\Release\net8.0\CarRentalService.Domain.pdb
+D:\FINKI\semestar 6\integrirani sistemi\project\CarRentalService\CarRentalService.Domain\obj\Release\net8.0\CarRentalService.Domain.csproj.AssemblyReference.cache
+D:\FINKI\semestar 6\integrirani sistemi\project\CarRentalService\CarRentalService.Domain\obj\Release\net8.0\CarRentalService.Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\FINKI\semestar 6\integrirani sistemi\project\CarRentalService\CarRentalService.Domain\obj\Release\net8.0\CarRentalService.Domain.AssemblyInfoInputs.cache
+D:\FINKI\semestar 6\integrirani sistemi\project\CarRentalService\CarRentalService.Domain\obj\Release\net8.0\CarRentalService.Domain.AssemblyInfo.cs
+D:\FINKI\semestar 6\integrirani sistemi\project\CarRentalService\CarRentalService.Domain\obj\Release\net8.0\CarRentalService.Domain.csproj.CoreCompileInputs.cache
+D:\FINKI\semestar 6\integrirani sistemi\project\CarRentalService\CarRentalService.Domain\obj\Release\net8.0\CarRentalService.Domain.sourcelink.json
+D:\FINKI\semestar 6\integrirani sistemi\project\CarRentalService\CarRentalService.Domain\obj\Release\net8.0\CarRentalService.Domain.dll
+D:\FINKI\semestar 6\integrirani sistemi\project\CarRentalService\CarRentalService.Domain\obj\Release\net8.0\refint\CarRentalService.Domain.dll
+D:\FINKI\semestar 6\integrirani sistemi\project\CarRentalService\CarRentalService.Domain\obj\Release\net8.0\CarRentalService.Domain.pdb
+D:\FINKI\semestar 6\integrirani sistemi\project\CarRentalService\CarRentalService.Domain\obj\Release\net8.0\CarRentalService.Domain.genruntimeconfig.cache
+D:\FINKI\semestar 6\integrirani sistemi\project\CarRentalService\CarRentalService.Domain\obj\Release\net8.0\ref\CarRentalService.Domain.dll
