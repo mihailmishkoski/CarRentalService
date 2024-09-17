@@ -9,8 +9,8 @@ namespace CarRentalServiceAdmin.Controllers
         public IActionResult Index()
         {
             HttpClient client = new HttpClient();
-            //string URL = "https://localhost:7144/api/API/GetAllCars";
-            string URL = "https://carrentalserviceweb20240916170024.azurewebsites.net/api/API/GetAllCars";
+            
+            string URL = "api to the application hosted on azure ";
 
             HttpResponseMessage response = client.GetAsync(URL).Result;
 
@@ -26,10 +26,10 @@ namespace CarRentalServiceAdmin.Controllers
 
             using (var workbook = new XLWorkbook())
             {
-                // Create a worksheet
+                
                 IXLWorksheet worksheet = workbook.Worksheets.Add("Cars");
 
-                // Add header row
+                
                 worksheet.Cell(1, 1).Value = "Car Name";
                 worksheet.Cell(1, 2).Value = "Description";
                 worksheet.Cell(1, 3).Value = "Model";
@@ -38,29 +38,28 @@ namespace CarRentalServiceAdmin.Controllers
                 worksheet.Cell(1, 6).Value = "Color";
                 worksheet.Cell(1, 7).Value = "License Plate";
 
-                // Fetch the list of cars (you can replace the URL with your actual API endpoint)
                 HttpClient client = new HttpClient();
-                // URL = "https://localhost:7144/api/API/GetAllCars";  // Change this to your actual API
-                string URL = "https://carrentalserviceweb20240916170024.azurewebsites.net/api/API/GetAllCars";
+                
+                string URL = "api to the application hosted on azure ";
 
 
                 HttpResponseMessage response = client.GetAsync(URL).Result;
-                var data = response.Content.ReadAsAsync<List<Car>>().Result;  // Assuming the API returns a List<Car>
+                var data = response.Content.ReadAsAsync<List<Car>>().Result;  
 
-                // Add data rows
+                
                 for (int i = 0; i < data.Count(); i++)
                 {
                     var car = data[i];
                     worksheet.Cell(i + 2, 1).Value = car.Name;
                     worksheet.Cell(i + 2, 2).Value = car.Description;
                     worksheet.Cell(i + 2, 3).Value = car.Model;
-                    worksheet.Cell(i + 2, 4).Value = car.DateManufactured.ToString("yyyy-MM-dd");  // Format date
+                    worksheet.Cell(i + 2, 4).Value = car.DateManufactured.ToString("yyyy-MM-dd"); 
                     worksheet.Cell(i + 2, 5).Value = car.KilometersTraveled;
-                    worksheet.Cell(i + 2, 6).Value = car.Color.ToString();  // Assuming Color is an enum or class with ToString()
+                    worksheet.Cell(i + 2, 6).Value = car.Color.ToString();  
                     worksheet.Cell(i + 2, 7).Value = car.LicensePlate;
                 }
 
-                // Return the Excel file
+                
                 using (var stream = new MemoryStream())
                 {
                     workbook.SaveAs(stream);

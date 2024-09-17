@@ -17,131 +17,131 @@ build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = CarRentalService.Web
 build_property.RootNamespace = CarRentalService.Web
-build_property.ProjectDir = D:\FINKI\semestar 6\integrirani sistemi\project\CarRentalService\CarRentalService\
+build_property.ProjectDir = D:\Web Projects\CarRentalService\CarRentalService\CarRentalService\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = D:\FINKI\semestar 6\integrirani sistemi\project\CarRentalService\CarRentalService
+build_property.MSBuildProjectDirectory = D:\Web Projects\CarRentalService\CarRentalService\CarRentalService
 build_property._RazorSourceGeneratorDebug = 
 
-[D:/FINKI/semestar 6/integrirani sistemi/project/CarRentalService/CarRentalService/Areas/Identity/Pages/Account/Register.cshtml]
+[D:/Web Projects/CarRentalService/CarRentalService/CarRentalService/Areas/Identity/Pages/Account/Register.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxSZWdpc3Rlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/FINKI/semestar 6/integrirani sistemi/project/CarRentalService/CarRentalService/Areas/Identity/Pages/Account/_ViewImports.cshtml]
+[D:/Web Projects/CarRentalService/CarRentalService/CarRentalService/Areas/Identity/Pages/Account/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxfVmlld0ltcG9ydHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/FINKI/semestar 6/integrirani sistemi/project/CarRentalService/CarRentalService/Areas/Identity/Pages/_ValidationScriptsPartial.cshtml]
+[D:/Web Projects/CarRentalService/CarRentalService/CarRentalService/Areas/Identity/Pages/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZhbGlkYXRpb25TY3JpcHRzUGFydGlhbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/FINKI/semestar 6/integrirani sistemi/project/CarRentalService/CarRentalService/Areas/Identity/Pages/_ViewImports.cshtml]
+[D:/Web Projects/CarRentalService/CarRentalService/CarRentalService/Areas/Identity/Pages/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/FINKI/semestar 6/integrirani sistemi/project/CarRentalService/CarRentalService/Areas/Identity/Pages/_ViewStart.cshtml]
+[D:/Web Projects/CarRentalService/CarRentalService/CarRentalService/Areas/Identity/Pages/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/FINKI/semestar 6/integrirani sistemi/project/CarRentalService/CarRentalService/Views/Cars/Create.cshtml]
+[D:/Web Projects/CarRentalService/CarRentalService/CarRentalService/Views/Cars/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2Fyc1xDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/FINKI/semestar 6/integrirani sistemi/project/CarRentalService/CarRentalService/Views/Cars/Delete.cshtml]
+[D:/Web Projects/CarRentalService/CarRentalService/CarRentalService/Views/Cars/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2Fyc1xEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/FINKI/semestar 6/integrirani sistemi/project/CarRentalService/CarRentalService/Views/Cars/Details.cshtml]
+[D:/Web Projects/CarRentalService/CarRentalService/CarRentalService/Views/Cars/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2Fyc1xEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/FINKI/semestar 6/integrirani sistemi/project/CarRentalService/CarRentalService/Views/Cars/Edit.cshtml]
+[D:/Web Projects/CarRentalService/CarRentalService/CarRentalService/Views/Cars/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2Fyc1xFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/FINKI/semestar 6/integrirani sistemi/project/CarRentalService/CarRentalService/Views/Cars/Index.cshtml]
+[D:/Web Projects/CarRentalService/CarRentalService/CarRentalService/Views/Cars/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2Fyc1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/FINKI/semestar 6/integrirani sistemi/project/CarRentalService/CarRentalService/Views/EventDTO/Index.cshtml]
+[D:/Web Projects/CarRentalService/CarRentalService/CarRentalService/Views/EventDTO/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXZlbnREVE9cSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/FINKI/semestar 6/integrirani sistemi/project/CarRentalService/CarRentalService/Views/Home/Index.cshtml]
+[D:/Web Projects/CarRentalService/CarRentalService/CarRentalService/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/FINKI/semestar 6/integrirani sistemi/project/CarRentalService/CarRentalService/Views/Home/Privacy.cshtml]
+[D:/Web Projects/CarRentalService/CarRentalService/CarRentalService/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/FINKI/semestar 6/integrirani sistemi/project/CarRentalService/CarRentalService/Views/RentParams/Index.cshtml]
+[D:/Web Projects/CarRentalService/CarRentalService/CarRentalService/Views/RentParams/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVudFBhcmFtc1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/FINKI/semestar 6/integrirani sistemi/project/CarRentalService/CarRentalService/Views/Rents/Create.cshtml]
+[D:/Web Projects/CarRentalService/CarRentalService/CarRentalService/Views/Rents/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVudHNcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/FINKI/semestar 6/integrirani sistemi/project/CarRentalService/CarRentalService/Views/Rents/Delete.cshtml]
+[D:/Web Projects/CarRentalService/CarRentalService/CarRentalService/Views/Rents/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVudHNcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/FINKI/semestar 6/integrirani sistemi/project/CarRentalService/CarRentalService/Views/Rents/Details.cshtml]
+[D:/Web Projects/CarRentalService/CarRentalService/CarRentalService/Views/Rents/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVudHNcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/FINKI/semestar 6/integrirani sistemi/project/CarRentalService/CarRentalService/Views/Rents/Edit.cshtml]
+[D:/Web Projects/CarRentalService/CarRentalService/CarRentalService/Views/Rents/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVudHNcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/FINKI/semestar 6/integrirani sistemi/project/CarRentalService/CarRentalService/Views/Rents/Index.cshtml]
+[D:/Web Projects/CarRentalService/CarRentalService/CarRentalService/Views/Rents/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVudHNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/FINKI/semestar 6/integrirani sistemi/project/CarRentalService/CarRentalService/Views/Returns/Create.cshtml]
+[D:/Web Projects/CarRentalService/CarRentalService/CarRentalService/Views/Returns/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmV0dXJuc1xDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/FINKI/semestar 6/integrirani sistemi/project/CarRentalService/CarRentalService/Views/Returns/Delete.cshtml]
+[D:/Web Projects/CarRentalService/CarRentalService/CarRentalService/Views/Returns/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmV0dXJuc1xEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/FINKI/semestar 6/integrirani sistemi/project/CarRentalService/CarRentalService/Views/Returns/Details.cshtml]
+[D:/Web Projects/CarRentalService/CarRentalService/CarRentalService/Views/Returns/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmV0dXJuc1xEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/FINKI/semestar 6/integrirani sistemi/project/CarRentalService/CarRentalService/Views/Returns/Edit.cshtml]
+[D:/Web Projects/CarRentalService/CarRentalService/CarRentalService/Views/Returns/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmV0dXJuc1xFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/FINKI/semestar 6/integrirani sistemi/project/CarRentalService/CarRentalService/Views/Returns/Index.cshtml]
+[D:/Web Projects/CarRentalService/CarRentalService/CarRentalService/Views/Returns/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmV0dXJuc1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/FINKI/semestar 6/integrirani sistemi/project/CarRentalService/CarRentalService/Views/Shared/Error.cshtml]
+[D:/Web Projects/CarRentalService/CarRentalService/CarRentalService/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/FINKI/semestar 6/integrirani sistemi/project/CarRentalService/CarRentalService/Views/Shared/_LoginPartial.cshtml]
+[D:/Web Projects/CarRentalService/CarRentalService/CarRentalService/Views/Shared/_LoginPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Mb2dpblBhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/FINKI/semestar 6/integrirani sistemi/project/CarRentalService/CarRentalService/Views/Shared/_ValidationScriptsPartial.cshtml]
+[D:/Web Projects/CarRentalService/CarRentalService/CarRentalService/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/FINKI/semestar 6/integrirani sistemi/project/CarRentalService/CarRentalService/Views/_ViewImports.cshtml]
+[D:/Web Projects/CarRentalService/CarRentalService/CarRentalService/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/FINKI/semestar 6/integrirani sistemi/project/CarRentalService/CarRentalService/Views/_ViewStart.cshtml]
+[D:/Web Projects/CarRentalService/CarRentalService/CarRentalService/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/FINKI/semestar 6/integrirani sistemi/project/CarRentalService/CarRentalService/Views/Shared/_Layout.cshtml]
+[D:/Web Projects/CarRentalService/CarRentalService/CarRentalService/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-02kp9b2b1r
