@@ -20,7 +20,6 @@ namespace CarRentalService.Repository
 
         public virtual DbSet<RentParams> RentParam { get; set; }
 
-        public virtual DbSet<RentParameters> RentParameters{ get; set; }
 
     }
 }

@@ -26,6 +26,7 @@ builder.Services.AddDefaultIdentity<Customer>(options => options.SignIn.RequireC
 builder.Services.AddControllersWithViews().AddNewtonsoftJson(options =>
     options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore);
 
+builder.Services.Configure<StripeSettings>(builder.Configuration.GetSection("Stripe"));
 
 builder.Services.AddControllersWithViews();
 
@@ -42,7 +43,6 @@ builder.Services.AddTransient<IUserService, UserService>();
 builder.Services.AddTransient<IRentParamsService, RentParamsService>();
 
 
-builder.Services.AddSingleton<RentParameters>();
 
 var app = builder.Build();
 

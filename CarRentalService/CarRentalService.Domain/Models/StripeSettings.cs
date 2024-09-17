@@ -6,11 +6,9 @@ using System.Threading.Tasks;
 
 namespace CarRentalService.Domain.Models
 {
-    public class RentParameters : BaseEnum
+    public class StripeSettings
     {
-        public int MinimumRentDays { get; set; } = 5;
-        public int? Discount { get; set; }
-
-
+        public string? PublishableKey { get; set; }
+        public string? SecretKey { get; set; }
     }
 }

@@ -21,13 +21,11 @@ namespace CarRentalService.Web.Controllers
         private readonly IRentService rentService;
         private readonly ICarService carService;
         private readonly IUserService userService;
-        private readonly RentParameters rentParameters;
-        public RentsController(IRentService rentService, ICarService carService, IUserService userService, RentParameters rentParameters)
+        public RentsController(IRentService rentService, ICarService carService, IUserService userService)
         {
             this.carService = carService;
             this.rentService = rentService;
             this.userService = userService;
-            this.rentParameters = rentParameters;
         }
 
         // GET: Rents

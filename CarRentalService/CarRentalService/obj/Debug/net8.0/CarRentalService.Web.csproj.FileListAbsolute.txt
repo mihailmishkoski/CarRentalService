@@ -543,3 +543,5 @@ D:\FINKI\semestar 6\integrirani sistemi\project\CarRentalService\CarRentalServic
 D:\FINKI\semestar 6\integrirani sistemi\project\CarRentalService\CarRentalService\obj\Debug\net8.0\CarRentalService.Web.pdb
 D:\FINKI\semestar 6\integrirani sistemi\project\CarRentalService\CarRentalService\obj\Debug\net8.0\CarRentalService.Web.genruntimeconfig.cache
 D:\FINKI\semestar 6\integrirani sistemi\project\CarRentalService\CarRentalService\obj\Debug\net8.0\ref\CarRentalService.Web.dll
+D:\FINKI\semestar 6\integrirani sistemi\project\CarRentalService\CarRentalService\bin\Debug\net8.0\Stripe.net.dll
+D:\FINKI\semestar 6\integrirani sistemi\project\CarRentalService\CarRentalService\bin\Debug\net8.0\System.Net.Http.Formatting.dll

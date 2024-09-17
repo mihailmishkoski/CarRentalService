@@ -82,6 +82,7 @@ namespace CarRentalService.Web.Controllers
                 carService.CreateNewCar(car);
                 return RedirectToAction(nameof(Index));
             }
+            ViewBag.ColorOptions = new SelectList(Enum.GetValues(typeof(ColorVehicle)), car.Color);
             return View(car);
         }
 
