@@ -8,9 +8,11 @@ using Microsoft.EntityFrameworkCore;
 using CarRentalService.Domain.Models;
 using CarRentalService.Repository;
 using CarRentalService.Service.Interface;
+using Microsoft.AspNetCore.Authorization;
 
 namespace CarRentalService.Web.Controllers
 {
+    [Authorize(Roles = "Admin")]
     public class RentParamsController : Controller
     {
         private readonly IRentParamsService _paramsService;

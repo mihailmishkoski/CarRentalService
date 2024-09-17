@@ -25,8 +25,15 @@ namespace CarRentalService.Service.Implementation
         public Return CreateNewReturn(Return r)
         {
             var rent = rentService.ReleaseRent(r.RentId);
-            int totalDays = (DateTime.Now.AddDays(1) - rent.RentDate).Days;
-            r.TotalPrice = totalDays * rent.RentAmount + r.LateFee;
+            if(DateTime.Now < rent.RentDate)
+            {
+                r.TotalPrice = rent.RentAmount;
+            }
+            else
+            {
+                int totalDays = (DateTime.Now.AddDays(1) - rent.RentDate).Days;
+                r.TotalPrice = totalDays * rent.RentAmount + r.LateFee;
+            }
             return returnRepository.Insert(r);
         }
 
