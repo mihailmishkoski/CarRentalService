@@ -7,6 +7,7 @@ D:\FINKI\semestar 6\integrirani sistemi\project\CarRentalService\CarRentalServic
 D:\FINKI\semestar 6\integrirani sistemi\project\CarRentalService\CarRentalService\obj\Release\net8.0\PubTmp\Out\Azure.Core.dll
 D:\FINKI\semestar 6\integrirani sistemi\project\CarRentalService\CarRentalService\obj\Release\net8.0\PubTmp\Out\Azure.Identity.dll
 D:\FINKI\semestar 6\integrirani sistemi\project\CarRentalService\CarRentalService\obj\Release\net8.0\PubTmp\Out\Humanizer.dll
+D:\FINKI\semestar 6\integrirani sistemi\project\CarRentalService\CarRentalService\obj\Release\net8.0\PubTmp\Out\System.Net.Http.Formatting.dll
 D:\FINKI\semestar 6\integrirani sistemi\project\CarRentalService\CarRentalService\obj\Release\net8.0\PubTmp\Out\Microsoft.AspNetCore.Cryptography.Internal.dll
 D:\FINKI\semestar 6\integrirani sistemi\project\CarRentalService\CarRentalService\obj\Release\net8.0\PubTmp\Out\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
 D:\FINKI\semestar 6\integrirani sistemi\project\CarRentalService\CarRentalService\obj\Release\net8.0\PubTmp\Out\Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.dll
@@ -70,6 +71,7 @@ D:\FINKI\semestar 6\integrirani sistemi\project\CarRentalService\CarRentalServic
 D:\FINKI\semestar 6\integrirani sistemi\project\CarRentalService\CarRentalService\obj\Release\net8.0\PubTmp\Out\NuGet.ProjectModel.dll
 D:\FINKI\semestar 6\integrirani sistemi\project\CarRentalService\CarRentalService\obj\Release\net8.0\PubTmp\Out\NuGet.Protocol.dll
 D:\FINKI\semestar 6\integrirani sistemi\project\CarRentalService\CarRentalService\obj\Release\net8.0\PubTmp\Out\NuGet.Versioning.dll
+D:\FINKI\semestar 6\integrirani sistemi\project\CarRentalService\CarRentalService\obj\Release\net8.0\PubTmp\Out\Stripe.net.dll
 D:\FINKI\semestar 6\integrirani sistemi\project\CarRentalService\CarRentalService\obj\Release\net8.0\PubTmp\Out\System.CodeDom.dll
 D:\FINKI\semestar 6\integrirani sistemi\project\CarRentalService\CarRentalService\obj\Release\net8.0\PubTmp\Out\System.Composition.AttributedModel.dll
 D:\FINKI\semestar 6\integrirani sistemi\project\CarRentalService\CarRentalService\obj\Release\net8.0\PubTmp\Out\System.Composition.Convention.dll

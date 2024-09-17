@@ -121,6 +121,16 @@ namespace CarRentalService.Web.Areas.Identity.Pages.Account
             ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
             if (ModelState.IsValid)
             {
+                var today = DateOnly.FromDateTime(DateTime.Today);
+                var age = today.Year - Input.DateOfBirth.Year;
+
+                // Check if the user is under 18
+                if (Input.DateOfBirth.AddYears(18) > today)
+                {
+                    ModelState.AddModelError(string.Empty, "You must be 18 years or older to register.");
+                    return Page(); // Redisplay the form with the validation message
+                }
+
                 var user = CreateUser();
 
                 await _userStore.SetUserNameAsync(user, Input.Email, CancellationToken.None);
@@ -136,7 +146,7 @@ namespace CarRentalService.Web.Areas.Identity.Pages.Account
                     _logger.LogInformation("User created a new account with password.");
 
 
-                    var roleAssignResult = await _userManager.AddToRoleAsync(user, "Admin");
+                    var roleAssignResult = await _userManager.AddToRoleAsync(user, "User");
 
                     if (!roleAssignResult.Succeeded)
                     {
