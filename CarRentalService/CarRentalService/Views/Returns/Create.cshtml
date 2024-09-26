@@ -10,6 +10,12 @@
 <hr />
 <div class="row">
     <div class="col-md-4">
+        @if (ViewData.ModelState.ContainsKey("ReturnErrorMessage"))
+        {
+            <div class="alert alert-danger">
+                @Html.ValidationMessage("ReturnErrorMessage")
+            </div>
+        }
         <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
 

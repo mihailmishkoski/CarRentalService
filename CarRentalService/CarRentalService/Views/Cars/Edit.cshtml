@@ -55,9 +55,12 @@
                 <input asp-for="LicensePlate" class="form-control" />
                 <span asp-validation-for="LicensePlate" class="text-danger"></span>
             </div>
-
-            <!-- Hidden ID field -->
-            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label asp-for="PricePerDay" class="control-label"></label>
+                <input asp-for="PricePerDay" class="form-control" />
+                <span asp-validation-for="PricePerDay" class="text-danger"></span>
+            </div>
+            
 
             <div class="form-group">
                 <input type="submit" value="Save" class="btn btn-primary" />

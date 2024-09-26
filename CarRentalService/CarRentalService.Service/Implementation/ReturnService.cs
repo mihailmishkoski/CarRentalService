@@ -1,4 +1,5 @@
 ﻿using CarRentalService.Domain.Models;
+using CarRentalService.Domain.Models.Exceptions;
 using CarRentalService.Repository.Interface;
 using CarRentalService.Service.Interface;
 using System;
@@ -34,7 +35,14 @@ namespace CarRentalService.Service.Implementation
                 int totalDays = (DateTime.Now.AddDays(1) - rent.RentDate).Days;
                 r.TotalPrice = totalDays * rent.RentAmount + r.LateFee;
             }
-            return returnRepository.Insert(r);
+            try
+            {
+                return returnRepository.Insert(r);
+            }
+            catch
+            {
+                throw new ReturnException("An error occured while trying to return the car. Please try again.");
+            }
         }
 
         public Return DeleteReturn(Guid id)

@@ -124,11 +124,11 @@ namespace CarRentalService.Web.Areas.Identity.Pages.Account
                 var today = DateOnly.FromDateTime(DateTime.Today);
                 var age = today.Year - Input.DateOfBirth.Year;
 
-                // Check if the user is under 18
+                
                 if (Input.DateOfBirth.AddYears(18) > today)
                 {
                     ModelState.AddModelError(string.Empty, "You must be 18 years or older to register.");
-                    return Page(); // Redisplay the form with the validation message
+                    return Page(); 
                 }
 
                 var user = CreateUser();

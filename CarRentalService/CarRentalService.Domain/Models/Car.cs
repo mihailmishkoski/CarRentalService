@@ -23,5 +23,6 @@ namespace CarRentalService.Domain.Models
         public string LicensePlate { get; set; }
 
         public ICollection<Rent>? Rents { get; set; }
+        public int PricePerDay {  get; set; }
     }
 }

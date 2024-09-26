@@ -23,7 +23,11 @@
         <input class="form-control" value="@car.Description" disabled />
         <input type="hidden" asp-for="CarId" value="@car.Id" />
     </div>
-
+    <div class="form-group">
+        <label class="control-label">Price per day</label>
+        <input class="form-control" value="@car.PricePerDay" disabled />
+        <input type="hidden" asp-for="@car.PricePerDay" value="@car.PricePerDay" />
+    </div>
     <div class="form-group">
         <label class="control-label">Customer</label>
         <input class="form-control" value="@customer.FirstName" disabled />
@@ -42,11 +46,7 @@
         <span asp-validation-for="ReturnDate" class="text-danger"></span>
     </div>
 
-    <div class="form-group">
-        <label asp-for="RentAmount" class="control-label"></label>
-        <input asp-for="RentAmount" class="form-control" />
-        <span asp-validation-for="RentAmount" class="text-danger"></span>
-    </div>
+    
 
     <div class="form-group">
         <input type="submit" value="Rent" class="btn btn-primary" />

@@ -78,7 +78,7 @@ namespace CarRentalService.Web.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Create([Bind("CarId,RentDate,ReturnDate,RentAmount")] Rent rent)
+        public IActionResult Create([Bind("CarId,RentDate,ReturnDate,PricePerDay")] Rent rent)
         {
             if (ModelState.IsValid)
             {
@@ -87,11 +87,11 @@ namespace CarRentalService.Web.Controllers
                 {
                     rentService.CreateNewRent(rent, customerId);
                 }
-                catch (CarNotAvailableException ex)
+                catch (CarException ex)
                 {
                     return RedirectToAction("Create", new { id = rent.CarId, errorMessage = ex.Message });
                 }
-                catch (RentNotAvailableException ex)
+                catch (RentException ex)
                 {
                     return RedirectToAction("Create", new { id = rent.CarId, errorMessage = ex.Message });
                 }

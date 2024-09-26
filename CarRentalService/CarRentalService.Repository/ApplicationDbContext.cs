@@ -2,6 +2,8 @@
 using CarRentalService.Domain.Models.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.ChangeTracking;
+using Microsoft.EntityFrameworkCore.Metadata;
 
 namespace CarRentalService.Repository
 {
@@ -20,6 +22,18 @@ namespace CarRentalService.Repository
 
         public virtual DbSet<RentParams> RentParam { get; set; }
 
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
 
+            
+            modelBuilder.Entity<RentParams>().HasData(new RentParams
+            {
+                Id = Guid.NewGuid(),
+                MinimumDaysForRent = 1, 
+                DiscountPercentage = 5.0m, 
+                AdditionalFees = 10.0m 
+            });
+        }
     }
 }

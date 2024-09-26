@@ -6,10 +6,9 @@ using System.Threading.Tasks;
 
 namespace CarRentalService.Domain.Models.Exceptions
 {
-    public class CarNotAvailableException : Exception
+    public class RentException : Exception
     {
-
-        public CarNotAvailableException(string message) : base(message)
+        public RentException(string message) : base(message)
         {
         }
     }

@@ -1,4 +1,5 @@
 ﻿using CarRentalService.Domain.Models;
+using CarRentalService.Domain.Models.Exceptions;
 using CarRentalService.Repository.Interface;
 using CarRentalService.Service.Interface;
 using System;
@@ -37,7 +38,14 @@ namespace CarRentalService.Service.Implementation
 
         public RentParams UpdateRentParams(RentParams rp)
         {
-            return _rentParamRepo.Update(rp);
+            try
+            {
+                return _rentParamRepo.Update(rp);
+            }
+            catch
+            {
+                throw new RentParamsException("An error occured while saving the new params, please try again.");
+            }
         }
     }
 }

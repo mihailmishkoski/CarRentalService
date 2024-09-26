@@ -16,5 +16,7 @@ namespace CarRentalService.Service.Interface
 
         public Car UpdateCar(Car id);
 
+        public bool IsLicencePlateValid(string  licencePlate, bool ?isEdit);
+
     }
 }

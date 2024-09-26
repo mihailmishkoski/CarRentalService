@@ -27,29 +27,37 @@ namespace CarRentalService.Service.Implementation
         {
             if (IsRentPeriodOverlapping(r.RentDate, r.ReturnDate, r.CarId))
             {
-                throw new CarNotAvailableException("The car is not available in the selected time interval.");
+                throw new CarException("The car is not available in the selected time interval.");
             }
             var rentParams = paramsService.GetRentParams();
-            int minDaysForReservation = rentParams.MinimumDaysForRent;  
+            int minDaysForReservation = rentParams.MinimumDaysForRent;
             int rentalDays = (r.ReturnDate - r.RentDate).Days;
             if (rentalDays < minDaysForReservation)
             {
-                throw new RentNotAvailableException($"The rental period must be at least {minDaysForReservation} days.");
+                throw new RentException($"The rental period must be at least {minDaysForReservation} days.");
             }
             r.isActive = true;
             r.CustomerId = customerId;
-            return rentRepository.Insert(r);
+            var car = carService.GetCarById(r.CarId);
+            r.RentAmount = rentalDays * car.PricePerDay;
+            try
+            {
+                return rentRepository.Insert(r);
+            }
+            catch 
+            {
+                throw new RentException("An error occurred while saving the rent. Please try again.");
+            }
         }
 
-        
 
-        /// <summary>
-        /// Deletes a rent and sets the associated car as available.This is an atomic operation, 
-        /// so changes to the Car and Rent are made within a try/catch block to ensure consistency.
-        /// </summary>
-        /// <param name="id">The unique identifier of the rent to be deleted.</param>
-        /// <returns>Deleted rent</returns>
-        public Rent DeleteRent(Guid ?id)
+            /// <summary>
+            /// Deletes a rent and sets the associated car as available.This is an atomic operation, 
+            /// so changes to the Car and Rent are made within a try/catch block to ensure consistency.
+            /// </summary>
+            /// <param name="id">The unique identifier of the rent to be deleted.</param>
+            /// <returns>Deleted rent</returns>
+            public Rent DeleteRent(Guid ?id)
         {
             Rent rent = _rentRepository.GetDetailsForRent(id);
             try 
@@ -105,7 +113,25 @@ namespace CarRentalService.Service.Implementation
 
         public Rent UpdateRent(Rent rent)
         {
-            return rentRepository.Update(rent);
+            if (IsRentPeriodOverlapping(rent.RentDate, rent.ReturnDate, rent.CarId))
+            {
+                throw new CarException("The car is not available in the selected time interval.");
+            }
+            var rentParams = paramsService.GetRentParams();
+            int minDaysForReservation = rentParams.MinimumDaysForRent;
+            int rentalDays = (rent.ReturnDate - rent.RentDate).Days;
+            if (rentalDays < minDaysForReservation)
+            {
+                throw new RentException($"The rental period must be at least {minDaysForReservation} days.");
+            }
+            try
+            {
+                return rentRepository.Update(rent);
+            }
+            catch
+            { 
+                throw new RentException("An error occurred while saving the rent. Please try again.");
+            }
         }
     }
 }

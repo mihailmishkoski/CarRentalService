@@ -10,6 +10,7 @@ using CarRentalService.Repository;
 using CarRentalService.Service.Interface;
 using Microsoft.AspNetCore.Authorization;
 using System.Security.Claims;
+using CarRentalService.Domain.Models.Exceptions;
 
 namespace CarRentalService.Web.Controllers
 {
@@ -87,7 +88,14 @@ namespace CarRentalService.Web.Controllers
         {
             if (ModelState.IsValid)
             {
-                _returnService.CreateNewReturn(@return);
+                try
+                {
+                    _returnService.CreateNewReturn(@return);
+                }
+                catch(ReturnException ex)
+                {
+                    ModelState.AddModelError("ReturnErrorMessage", ex.Message);
+                }
                 if (User.IsInRole("Admin"))
                 {
                     // Redirect to the Returns Index if the user is an admin

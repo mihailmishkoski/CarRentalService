@@ -9,6 +9,7 @@ using CarRentalService.Domain.Models;
 using CarRentalService.Repository;
 using CarRentalService.Service.Interface;
 using Microsoft.AspNetCore.Authorization;
+using CarRentalService.Domain.Models.Exceptions;
 
 namespace CarRentalService.Web.Controllers
 {
@@ -23,12 +24,16 @@ namespace CarRentalService.Web.Controllers
         }
 
         // GET: RentParams/Edit/5
-        public IActionResult Index()
+        public IActionResult Index(string ?errorMessage)
         {
             var rentParams = _paramsService.GetRentParams();
             if (rentParams == null)
             {
                 return NotFound();
+            }
+            if (!string.IsNullOrEmpty(errorMessage))
+            {
+                ViewData["ErrorMessage"] = errorMessage;
             }
             return View(rentParams);
         }
@@ -51,16 +56,9 @@ namespace CarRentalService.Web.Controllers
                 {
                     _paramsService.UpdateRentParams(rentParams);
                 }
-                catch (DbUpdateConcurrencyException)
+                catch (RentParamsException ex)
                 {
-                    if (!RentParamsExists(rentParams.Id))
-                    {
-                        return NotFound();
-                    }
-                    else
-                    {
-                        throw;
-                    }
+                    return RedirectToAction("Create", new {errorMessage = ex.Message });
                 }
                 return RedirectToAction(nameof(Index));
             }

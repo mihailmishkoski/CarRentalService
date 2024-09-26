@@ -11,6 +11,7 @@ using System.Runtime.ConstrainedExecution;
 using CarRentalService.Service.Interface;
 using Microsoft.AspNetCore.Authorization;
 using System.Text.RegularExpressions;
+using CarRentalService.Domain.Models.Exceptions;
 
 
 namespace CarRentalService.Web.Controllers
@@ -62,27 +63,21 @@ namespace CarRentalService.Web.Controllers
         [HttpPost]
         [ValidateAntiForgeryToken]
         [Authorize(Roles = "Admin")]
-        public IActionResult Create([Bind("Name,Description,Model,DateManufactured,KilometersTraveled,Color,LicensePlate,Id")] Car car)
+        public IActionResult Create([Bind("Name,Description,Model,DateManufactured,KilometersTraveled,Color,LicensePlate,PricePerDay,Id")] Car car)
         {
-            var licensePlateFormat = @"^[A-Z]{2}-\d{4}-[A-Z]{2}$";
-            var licensePlate = car.LicensePlate;
-            List<Car> cars = carService.GetCars();
-            foreach(Car check in cars){
-                if (check.LicensePlate.Equals(licensePlate))
-                {
-                    ModelState.AddModelError("LicensePlate", "This car already exists");
-                }
-            }
-            if(!Regex.IsMatch(car.LicensePlate.ToUpper(), licensePlateFormat))
-            {
-                ModelState.AddModelError("LicensePlate", "The license plate must be in this format: AB-1234-CD");
-            }
             if (ModelState.IsValid)
             {
-                carService.CreateNewCar(car);
-                return RedirectToAction(nameof(Index));
+                try
+                {
+                    carService.CreateNewCar(car);
+                    return RedirectToAction(nameof(Index));
+                }
+                catch(CarException ex)
+                {
+                    ModelState.AddModelError("LicensePlate", ex.Message);
+                }
             }
-            ViewBag.ColorOptions = new SelectList(Enum.GetValues(typeof(ColorVehicle)), car.Color);
+            ViewBag.ColorOptions = new SelectList(Enum.GetValues(typeof(ColorVehicle)));
             return View(car);
         }
 
@@ -110,7 +105,7 @@ namespace CarRentalService.Web.Controllers
         [HttpPost]
         [ValidateAntiForgeryToken]
         [Authorize(Roles = "Admin")]
-        public IActionResult Edit(Guid id, [Bind("Name,Description,Model,DateManufactured,KilometersTraveled,Color,LicensePlate,Id")] Car car)
+        public IActionResult Edit(Guid id, [Bind("Name,Description,Model,DateManufactured,KilometersTraveled,Color,LicensePlate,PricePerDay,Id")] Car car)
         {
             if (id != car.Id)
             {
@@ -123,20 +118,15 @@ namespace CarRentalService.Web.Controllers
                 {
                     var existingCar = carService.GetCarById(id);
                     carService.UpdateCar(car);
+                    return RedirectToAction(nameof(Index));
                 }
-                catch (DbUpdateConcurrencyException)
+                catch (CarException ex)
                 {
-                    if (!CarExists(car.Id))
-                    {
-                        return NotFound();
-                    }
-                    else
-                    {
-                        throw;
-                    }
+                    ModelState.AddModelError("LicensePlate", ex.Message);
                 }
-                return RedirectToAction(nameof(Index));
+                
             }
+            ViewBag.ColorOptions = new SelectList(Enum.GetValues(typeof(ColorVehicle)), car.Color);
             return View(car);
         }
 

@@ -53,6 +53,9 @@ namespace CarRentalService.Repository.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int>("PricePerDay")
+                        .HasColumnType("int");
+
                     b.HasKey("Id");
 
                     b.ToTable("Cars");
@@ -146,7 +149,7 @@ namespace CarRentalService.Repository.Migrations
                     b.Property<string>("CustomerId")
                         .HasColumnType("nvarchar(450)");
 
-                    b.Property<int>("RentAmount")
+                    b.Property<int?>("RentAmount")
                         .HasColumnType("int");
 
                     b.Property<DateTime>("RentDate")
@@ -167,23 +170,6 @@ namespace CarRentalService.Repository.Migrations
                     b.ToTable("Rents");
                 });
 
-            modelBuilder.Entity("CarRentalService.Domain.Models.RentParameters", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<int?>("Discount")
-                        .HasColumnType("int");
-
-                    b.Property<int>("MinimumRentDays")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("RentParameters");
-                });
-
             modelBuilder.Entity("CarRentalService.Domain.Models.RentParams", b =>
                 {
                     b.Property<Guid>("Id")
@@ -202,6 +188,15 @@ namespace CarRentalService.Repository.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("RentParam");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = new Guid("c80e42a3-2da4-41d3-a89e-a35c1ec02ae6"),
+                            AdditionalFees = 10.0m,
+                            DiscountPercentage = 5.0m,
+                            MinimumDaysForRent = 1
+                        });
                 });
 
             modelBuilder.Entity("CarRentalService.Domain.Models.Return", b =>

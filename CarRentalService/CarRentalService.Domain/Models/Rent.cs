@@ -13,7 +13,7 @@ namespace CarRentalService.Domain.Models
         public string ?CustomerId { get; set; }
         public DateTime RentDate { get; set; }
         public DateTime ReturnDate { get; set; }
-        public int RentAmount { get; set; }
+        public int ?RentAmount { get; set; }
         public Car ?Car { get; set; }
         public Customer ?Customer { get; set; }
         public Return ?Return { get; set; }

@@ -7,20 +7,19 @@ namespace CarRentalService.Web.Controllers.API
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class APIController : ControllerBase
+    public class RentController : ControllerBase
     {
-        private readonly ICarService _carService;
+        private readonly IRentService _rentService;
 
-        public APIController(ICarService carService)
+        public RentController(IRentService rentService)
         {
-            _carService = carService;
+            _rentService = rentService;
         }
 
         [HttpGet("[action]")]
-        public List<Car> GetAllCars()
+        public List<Rent> GetAllRents()
         {
-            return _carService.GetCars();
+            return _rentService.GetRents();
         }
-        
     }
 }
