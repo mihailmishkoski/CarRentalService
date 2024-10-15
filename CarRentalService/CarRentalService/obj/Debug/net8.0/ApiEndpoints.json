@@ -100,6 +100,48 @@
   },
   {
     "ContainingType": "CarRentalService.Web.Controllers.API.RentController",
+    "Method": "Create",
+    "RelativePath": "api/Rent",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "rent",
+        "Type": "CarRentalService.Domain.Models.Rent",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CarRentalService.Web.Controllers.API.RentController",
+    "Method": "GetRentById",
+    "RelativePath": "api/Rent/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "CarRentalService.Domain.Models.Car",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "CarRentalService.Web.Controllers.API.RentController",
     "Method": "GetAllRents",
     "RelativePath": "api/Rent/GetAllRents",
     "HttpMethod": "GET",
@@ -117,5 +159,31 @@
         "StatusCode": 200
       }
     ]
+  },
+  {
+    "ContainingType": "CarRentalService.Web.Controllers.API.ReturnController",
+    "Method": "Create",
+    "RelativePath": "api/Return",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "returnModel",
+        "Type": "CarRentalService.Domain.Models.Return",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CarRentalService.Web.Controllers.API.ReturnController",
+    "Method": "GetAllReturns",
+    "RelativePath": "api/Return/GetAllReturns",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
   }
 ]

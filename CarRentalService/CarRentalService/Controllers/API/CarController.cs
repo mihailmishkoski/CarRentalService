@@ -65,11 +65,6 @@ namespace CarRentalService.Web.Controllers.API
         [HttpPut("{id}")]
         public ActionResult UpdateCar(Guid id, [FromBody] Car car)
         {
-            if (id != car.Id)
-            {
-                return BadRequest("Car ID mismatch");
-            }
-
             if (ModelState.IsValid)
             {
                 try
@@ -79,8 +74,16 @@ namespace CarRentalService.Web.Controllers.API
                     {
                         return NotFound("Car not found");
                     }
-
-                    _carService.UpdateCar(car);
+                    existingCar.Name = car.Name;
+                    existingCar.Description = car.Description;
+                    existingCar.Model = car.Model;
+                    existingCar.DateManufactured = car.DateManufactured;
+                    existingCar.KilometersTraveled = car.KilometersTraveled;
+                    existingCar.Color = car.Color;
+                    existingCar.LicensePlate = car.LicensePlate;
+                    existingCar.PricePerDay = car.PricePerDay;
+ 
+                    _carService.UpdateCar(existingCar);
                     return NoContent(); 
                 }
                 catch (CarException ex)
@@ -91,6 +94,7 @@ namespace CarRentalService.Web.Controllers.API
 
             return BadRequest("Invalid car data");
         }
+
 
         // DELETE: api/Car/{id}
         [HttpDelete("{id}")]

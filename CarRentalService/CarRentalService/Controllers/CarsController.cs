@@ -118,7 +118,6 @@ namespace CarRentalService.Web.Controllers
                 {
                     var existingCar = carService.GetCarById(id);
                     carService.UpdateCar(car);
-                    return RedirectToAction(nameof(Index));
                 }
                 catch (CarException ex)
                 {
