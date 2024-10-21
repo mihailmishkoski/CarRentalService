@@ -9,6 +9,7 @@ using System.Collections.Generic;
 namespace CarRentalService.Web.Controllers.API
 {
     [Route("api/[controller]")]
+    [Authorize]
     [ApiController]
     public class CarController : ControllerBase
     {

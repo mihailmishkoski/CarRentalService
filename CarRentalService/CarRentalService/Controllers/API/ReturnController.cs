@@ -2,6 +2,7 @@
 using CarRentalService.Domain.Models;
 using CarRentalService.Service.Implementation;
 using CarRentalService.Service.Interface;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 

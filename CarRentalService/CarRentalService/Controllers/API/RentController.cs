@@ -2,6 +2,7 @@
 using CarRentalService.Domain.Models.Exceptions;
 using CarRentalService.Service.Interface;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Security.Claims;
 

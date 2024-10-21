@@ -11,6 +11,9 @@ import CarDetails from "../Car/CarDetails/carDetails";
 import RentAdd from "../Rent/RentAdd/rentAdd";
 import Return from "../Return/ReturnList/returns";
 import ReturnAdd from "../Return/ReturnAdd/returnAdd";
+import Register from "../Register/register";
+import Login from "../Login/login"
+import Cookies from "js-cookie";
 
 class App extends Component {
     constructor(props) {
@@ -56,6 +59,11 @@ class App extends Component {
                             <Route path={"/return/add/:id"} exact element={
                                 <ReturnAdd rent={this.state.selectedRent}
                                         onAddReturn={this.returnCar}/>}/>
+                            <Route path={"/register"} exact element={
+                                <Register onRegister={this.register} />}/>
+                            <Route path={"/login"} exact element={
+                                <Login onLogin={this.logIn}
+                                       loadInitialData={this.loadInitialData}/>}/>
                         </Routes>
                     </div>
                 </main>
@@ -139,7 +147,19 @@ class App extends Component {
                 }
             )
     }
+    register = (FirstName, LastName, Email, DateOfBirth, Password) => {
+        return CarRentalService.register(FirstName, LastName, Email, DateOfBirth, Password)
+    }
+    logIn = (email, password) => {
+        return CarRentalService.logIn(email, password);
+    }
     componentDidMount() {
+        const token = Cookies.get('jwtToken');
+        if (token) {
+            this.loadInitialData()
+        }
+    }
+    loadInitialData = () => {
         this.loadCars();
         this.loadRents();
         this.loadReturns();

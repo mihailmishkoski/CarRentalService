@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34701.34
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarRentalService.Web", "CarRentalService\CarRentalService.Web.csproj", "{774A7D95-3166-4DBD-8661-A19F74773FA5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CarRentalService.Web", "CarRentalService\CarRentalService.Web.csproj", "{774A7D95-3166-4DBD-8661-A19F74773FA5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarRentalService.Domain", "CarRentalService.Domain\CarRentalService.Domain.csproj", "{51F227AE-0155-4C9A-8096-F89ECB25E320}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CarRentalService.Domain", "CarRentalService.Domain\CarRentalService.Domain.csproj", "{51F227AE-0155-4C9A-8096-F89ECB25E320}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarRentalService.Repository", "CarRentalService.Repository\CarRentalService.Repository.csproj", "{FBF3AAEC-7368-4688-BCF8-37BED0245481}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CarRentalService.Repository", "CarRentalService.Repository\CarRentalService.Repository.csproj", "{FBF3AAEC-7368-4688-BCF8-37BED0245481}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarRentalService.Service", "CarRentalService.Service\CarRentalService.Service.csproj", "{03122643-A9CE-49E0-AAB9-E02273FE291D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CarRentalService.Service", "CarRentalService.Service\CarRentalService.Service.csproj", "{03122643-A9CE-49E0-AAB9-E02273FE291D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
