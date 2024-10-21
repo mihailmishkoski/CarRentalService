@@ -35,6 +35,7 @@ const Login = (props) => {
             .then((response) => {
                 const token = response.data.token;
                 Cookies.set('jwtToken', token);
+                props.Authenticate()
                 return props.loadInitialData();
             })
             .then(() => {

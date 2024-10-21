@@ -8,7 +8,7 @@ using CarRentalService.Service.Interface;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.IdentityModel.JsonWebTokens; // Import the JsonWebToken namespace
+using Microsoft.IdentityModel.JsonWebTokens; 
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
 
@@ -23,7 +23,7 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
 });
 
 builder.Configuration.AddUserSecrets<Program>();
-builder.Services.AddDefaultIdentity<Customer>(options => options.SignIn.RequireConfirmedAccount = true)
+builder.Services.AddDefaultIdentity<Customer>(options => options.SignIn.RequireConfirmedAccount = false)
     .AddRoles<IdentityRole>()
     .AddEntityFrameworkStores<ApplicationDbContext>();
 

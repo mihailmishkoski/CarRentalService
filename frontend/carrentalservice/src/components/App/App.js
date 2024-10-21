@@ -1,4 +1,4 @@
-import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
+import {BrowserRouter as Router, Navigate, Route, Routes} from 'react-router-dom';
 import './App.css';
 import {Component} from "react";
 import CarRentalService from "../../repository/CarServiceRepository";
@@ -15,6 +15,7 @@ import Register from "../Register/register";
 import Login from "../Login/login"
 import Cookies from "js-cookie";
 
+
 class App extends Component {
     constructor(props) {
         super(props);
@@ -23,47 +24,118 @@ class App extends Component {
             rents: [],
             returns: [],
             selectedCar: {},
-            selectedRent: {}
+            selectedRent: {},
+            isAuthenticated: false
         }
+
     }
 
     render() {
         return (
             <Router>
-                <Header/>
+                <Header clearState={this.clearState} />
                 <main>
                     <div className={"container"}>
-                        <br/>
+                        <br />
                         <Routes>
-                            <Route path={"/cars"} exact element={
-                                <Car cars={this.state.cars}
-                                     getCarById={this.getCar}
-                                     onDelete={this.deleteCar}
-                                     onRent={this.rentCar}
-                                />}/>
-                            <Route path={"/cars/add"} exact element={
-                                <CarAdd onAddCar={this.addCar}/>}/>
-                            <Route path={"/cars/edit/:id"} exact element={
-                                <CarEdit onEditCar={this.editCar}
-                                         car={this.state.selectedCar}/>}/>
-                            <Route path={"/cars/:id"} exact element={
-                                <CarDetails car={this.state.selectedCar}/>}/>
-                            <Route path={"/rents"} exact element={
-                                <Rent rents={this.state.rents}
-                                      getRentById={this.getRent}/>}/>
-                            <Route path={"/rents/add/:id"} exact element={
-                                <RentAdd car={this.state.selectedCar}
-                                      onAddRent={this.rentCar}/>}/>
-                            <Route path={"/returns/"} exact element={
-                                <Return returns={this.state.returns}/>}/>
-                            <Route path={"/return/add/:id"} exact element={
-                                <ReturnAdd rent={this.state.selectedRent}
-                                        onAddReturn={this.returnCar}/>}/>
-                            <Route path={"/register"} exact element={
-                                <Register onRegister={this.register} />}/>
-                            <Route path={"/login"} exact element={
-                                <Login onLogin={this.logIn}
-                                       loadInitialData={this.loadInitialData}/>}/>
+                            <Route path="/" element={
+                                this.state.isAuthenticated ? (
+                                    <Navigate to="/cars" />
+                                ) : (
+                                    <Login onLogin={this.logIn}
+                                           loadInitialData={this.loadInitialData}
+                                           Authenticate={this.Authenticate} />
+                                )
+                            } />
+
+                            <Route path="/cars" exact element={
+                                this.state.isAuthenticated ? (
+                                    <Car cars={this.state.cars}
+                                         getCarById={this.getCar}
+                                         onDelete={this.deleteCar}
+                                         onRent={this.rentCar} />
+                                ) : (
+                                    <Navigate to="/login" />
+                                )
+                            } />
+
+                            <Route path="/cars/add" exact element={
+                                this.state.isAuthenticated ? (
+                                    <CarAdd onAddCar={this.addCar} />
+                                ) : (
+                                    <Navigate to="/login" />
+                                )
+                            } />
+
+                            <Route path="/cars/edit/:id" exact element={
+                                this.state.isAuthenticated ? (
+                                    <CarEdit onEditCar={this.editCar}
+                                             car={this.state.selectedCar} />
+                                ) : (
+                                    <Navigate to="/login" />
+                                )
+                            } />
+
+                            <Route path="/cars/:id" exact element={
+                                this.state.isAuthenticated ? (
+                                    <CarDetails car={this.state.selectedCar} />
+                                ) : (
+                                    <Navigate to="/login" />
+                                )
+                            } />
+
+                            <Route path="/rents" exact element={
+                                this.state.isAuthenticated ? (
+                                    <Rent rents={this.state.rents}
+                                          getRentById={this.getRent} />
+                                ) : (
+                                    <Navigate to="/login" />
+                                )
+                            } />
+
+                            <Route path="/rents/add/:id" exact element={
+                                this.state.isAuthenticated ? (
+                                    <RentAdd car={this.state.selectedCar}
+                                             onAddRent={this.rentCar} />
+                                ) : (
+                                    <Navigate to="/login" />
+                                )
+                            } />
+
+                            <Route path="/returns" exact element={
+                                this.state.isAuthenticated ? (
+                                    <Return returns={this.state.returns} />
+                                ) : (
+                                    <Navigate to="/login" />
+                                )
+                            } />
+
+                            <Route path="/return/add/:id" exact element={
+                                this.state.isAuthenticated ? (
+                                    <ReturnAdd rent={this.state.selectedRent}
+                                               onAddReturn={this.returnCar} />
+                                ) : (
+                                    <Navigate to="/login" />
+                                )
+                            } />
+
+                            <Route path="/register" exact element={
+                                !this.state.isAuthenticated ? (
+                                    <Register onRegister={this.register} />
+                                ) : (
+                                    <Navigate to="/cars" />
+                                )
+                            } />
+
+                            <Route path="/login" exact element={
+                                !this.state.isAuthenticated ? (
+                                    <Login onLogin={this.logIn}
+                                           loadInitialData={this.loadInitialData}
+                                           Authenticate={this.Authenticate} />
+                                ) : (
+                                    <Navigate to="/cars" />
+                                )
+                            } />
                         </Routes>
                     </div>
                 </main>
@@ -97,10 +169,10 @@ class App extends Component {
     }
     addCar = (name, description, model, dateManufactured, kilometersTraveled, licensePlate, pricePerDay) => {
         return CarRentalService.addCar(name, description, model, dateManufactured, kilometersTraveled, licensePlate, pricePerDay)
-        .then(() => {
-            this.loadCars();
-            this.setState({ carError: "" });
-        });
+            .then(() => {
+                this.loadCars();
+                this.setState({ carError: "" });
+            });
     }
     getCar = (id) => {
         CarRentalService.getCar(id)
@@ -157,13 +229,30 @@ class App extends Component {
         const token = Cookies.get('jwtToken');
         if (token) {
             this.loadInitialData()
+            this.Authenticate();
         }
+    }
+    clearState = () => {
+        this.setState({
+            cars: [],
+            rents: [],
+            returns: [],
+            selectedCar: {},
+            selectedRent: {},
+            isAuthenticated: false,
+        });
+    }
+    Authenticate = () => {
+        this.setState({
+            isAuthenticated:  true,
+        });
     }
     loadInitialData = () => {
         this.loadCars();
         this.loadRents();
         this.loadReturns();
     }
+
 }
 
 export default App;
