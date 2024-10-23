@@ -10,6 +10,7 @@ namespace CarRentalService.Web.Controllers.API
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
     public class ReturnController : ControllerBase
     {
         private readonly IReturnService _returnService;

@@ -53,7 +53,8 @@ class App extends Component {
                                     <Car cars={this.state.cars}
                                          getCarById={this.getCar}
                                          onDelete={this.deleteCar}
-                                         onRent={this.rentCar} />
+                                         onRent={this.rentCar}
+                                         onSearchCar={this.searchCar}/>
                                 ) : (
                                     <Navigate to="/login" />
                                 )
@@ -204,7 +205,7 @@ class App extends Component {
             )
     }
     getRent = (id) => {
-        CarRentalService.getRent(id)
+        return CarRentalService.getRent(id)
             .then((data) => {
                 this.setState({
                     selectedRent: data.data
@@ -246,6 +247,21 @@ class App extends Component {
         this.setState({
             isAuthenticated:  true,
         });
+    }
+    searchCar = (name) => {
+        if(name.isEmpty || name === "")
+        {
+            this.loadCars();
+        }
+        else
+        {
+             CarRentalService.getCarByName(name)
+                .then((data) => {
+                    this.setState({
+                        cars: data.data
+                    })
+                });
+        }
     }
     loadInitialData = () => {
         this.loadCars();

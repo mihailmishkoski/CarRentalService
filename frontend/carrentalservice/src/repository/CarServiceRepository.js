@@ -37,6 +37,7 @@ const CarRentalService = {
     getCar: (id) => {
         return axios.get(`/car/${id}`, { withCredentials: true });
     },
+
     deleteCar: (id) => {
         return axios.delete(`/car/${id}`, { withCredentials: true });
     },
@@ -70,7 +71,10 @@ const CarRentalService = {
             "email": email,
             "password": password
         });
-    }
+    },
+    getCarByName: (name) => {
+        return axios.get(`/car/${name}`, { withCredentials: true });
+    },
 }
 
 export default CarRentalService;

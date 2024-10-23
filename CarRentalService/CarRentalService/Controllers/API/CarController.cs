@@ -3,6 +3,7 @@ using CarRentalService.Domain.Models.Exceptions;
 using CarRentalService.Service.Interface;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.CodeAnalysis.CSharp.Syntax;
 using System;
 using System.Collections.Generic;
 
@@ -29,7 +30,7 @@ namespace CarRentalService.Web.Controllers.API
         }
 
         // GET: api/Car/{id}
-        [HttpGet("{id}")]
+        [HttpGet("{id:guid}")]
         public ActionResult<Car> GetCarById(Guid id)
         {
             var car = _carService.GetCarById(id);
@@ -37,6 +38,20 @@ namespace CarRentalService.Web.Controllers.API
             if (car == null)
             {
                 return NotFound("Car not found");
+            }
+
+            return Ok(car);
+        }
+        // GET: api/Car/{name}
+        [HttpGet("{name}")]
+        public ActionResult<Car> ?GetCarByName(string name)
+        {
+           
+            var car = _carService.GetByName(name);
+
+            if (car == null)
+            {
+                return null;
             }
 
             return Ok(car);

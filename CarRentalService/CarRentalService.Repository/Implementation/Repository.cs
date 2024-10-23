@@ -40,6 +40,27 @@ namespace CarRentalService.Repository.Implementation
             return entities.AsEnumerable();
         }
 
+        public IEnumerable<T> GetByName(string? name)
+        {
+            if (string.IsNullOrWhiteSpace(name))
+            {
+                return Enumerable.Empty<T>(); 
+            }
+
+            switch (typeof(T).Name)
+            {
+                case nameof(Car):
+                    
+                    return entities.OfType<Car>()
+                                   .Where(c => EF.Functions.Like(c.Name, name)) 
+                                   .Cast<T>()
+                                   .ToList();
+
+                default:
+                    throw new InvalidOperationException("This entity does not support searching by name.");
+            }
+        }
+
         public T Insert(T entity)
         {
             if (entity == null)

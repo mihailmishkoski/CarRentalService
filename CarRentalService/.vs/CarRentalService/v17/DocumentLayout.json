@@ -1,7 +1,24 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "D:\\Web Projects\\CarRentalService\\CarRentalService\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{FBF3AAEC-7368-4688-BCF8-37BED0245481}|CarRentalService.Repository\\CarRentalService.Repository.csproj|d:\\web projects\\carrentalservice\\carrentalservice\\carrentalservice.repository\\implementation\\repository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBF3AAEC-7368-4688-BCF8-37BED0245481}|CarRentalService.Repository\\CarRentalService.Repository.csproj|solutionrelative:carrentalservice.repository\\implementation\\repository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{03122643-A9CE-49E0-AAB9-E02273FE291D}|CarRentalService.Service\\CarRentalService.Service.csproj|d:\\web projects\\carrentalservice\\carrentalservice\\carrentalservice.service\\implementation\\carservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{03122643-A9CE-49E0-AAB9-E02273FE291D}|CarRentalService.Service\\CarRentalService.Service.csproj|solutionrelative:carrentalservice.service\\implementation\\carservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{03122643-A9CE-49E0-AAB9-E02273FE291D}|CarRentalService.Service\\CarRentalService.Service.csproj|d:\\web projects\\carrentalservice\\carrentalservice\\carrentalservice.service\\interface\\icarservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{03122643-A9CE-49E0-AAB9-E02273FE291D}|CarRentalService.Service\\CarRentalService.Service.csproj|solutionrelative:carrentalservice.service\\interface\\icarservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBF3AAEC-7368-4688-BCF8-37BED0245481}|CarRentalService.Repository\\CarRentalService.Repository.csproj|d:\\web projects\\carrentalservice\\carrentalservice\\carrentalservice.repository\\interface\\irepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBF3AAEC-7368-4688-BCF8-37BED0245481}|CarRentalService.Repository\\CarRentalService.Repository.csproj|solutionrelative:carrentalservice.repository\\interface\\irepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 9,
           "Children": [
             {
               "$type": "Bookmark",
@@ -34,6 +51,58 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{fbcae063-e2c0-4ab1-a516-996ea3dafb72}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ICarService.cs",
+              "DocumentMoniker": "D:\\Web Projects\\CarRentalService\\CarRentalService\\CarRentalService.Service\\Interface\\ICarService.cs",
+              "RelativeDocumentMoniker": "CarRentalService.Service\\Interface\\ICarService.cs",
+              "ToolTip": "D:\\Web Projects\\CarRentalService\\CarRentalService\\CarRentalService.Service\\Interface\\ICarService.cs",
+              "RelativeToolTip": "CarRentalService.Service\\Interface\\ICarService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-23T22:07:24.373Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CarService.cs",
+              "DocumentMoniker": "D:\\Web Projects\\CarRentalService\\CarRentalService\\CarRentalService.Service\\Implementation\\CarService.cs",
+              "RelativeDocumentMoniker": "CarRentalService.Service\\Implementation\\CarService.cs",
+              "ToolTip": "D:\\Web Projects\\CarRentalService\\CarRentalService\\CarRentalService.Service\\Implementation\\CarService.cs",
+              "RelativeToolTip": "CarRentalService.Service\\Implementation\\CarService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAswA8AAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-23T22:06:27.589Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "IRepository.cs",
+              "DocumentMoniker": "D:\\Web Projects\\CarRentalService\\CarRentalService\\CarRentalService.Repository\\Interface\\IRepository.cs",
+              "RelativeDocumentMoniker": "CarRentalService.Repository\\Interface\\IRepository.cs",
+              "ToolTip": "D:\\Web Projects\\CarRentalService\\CarRentalService\\CarRentalService.Repository\\Interface\\IRepository.cs",
+              "RelativeToolTip": "CarRentalService.Repository\\Interface\\IRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-23T22:05:36.363Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Repository.cs",
+              "DocumentMoniker": "D:\\Web Projects\\CarRentalService\\CarRentalService\\CarRentalService.Repository\\Implementation\\Repository.cs",
+              "RelativeDocumentMoniker": "CarRentalService.Repository\\Implementation\\Repository.cs",
+              "ToolTip": "D:\\Web Projects\\CarRentalService\\CarRentalService\\CarRentalService.Repository\\Implementation\\Repository.cs",
+              "RelativeToolTip": "CarRentalService.Repository\\Implementation\\Repository.cs",
+              "ViewState": "AgIAAEQAAAAAAAAAAAAUwC4AAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-23T21:57:10.266Z",
+              "EditorCaption": ""
             }
           ]
         }

@@ -131,6 +131,32 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "CarRentalService.Web.Controllers.API.CarController",
+    "Method": "GetCarByName",
+    "RelativePath": "api/Car/{name}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "name",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "CarRentalService.Domain.Models.Car",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
     "ContainingType": "CarRentalService.Web.Controllers.API.RentController",
     "Method": "Create",
     "RelativePath": "api/Rent",

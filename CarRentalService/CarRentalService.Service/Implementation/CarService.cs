@@ -48,6 +48,11 @@ namespace CarRentalService.Service.Implementation
             return car;
         }
 
+        public IEnumerable<Car> GetByName(string? name)
+        {
+            return carRepository.GetByName(name);
+        }
+
         public Car GetCarById(Guid? id)
         {
             return carRepository.Get(id);

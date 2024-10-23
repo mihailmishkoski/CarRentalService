@@ -15,6 +15,7 @@ namespace CarRentalService.Service.Interface
         public Car DeleteCar(Guid id);
 
         public Car UpdateCar(Car id);
+        public IEnumerable<Car> GetByName(string ?name);
 
         public bool IsLicencePlateValid(string  licencePlate, bool ?isEdit);
 

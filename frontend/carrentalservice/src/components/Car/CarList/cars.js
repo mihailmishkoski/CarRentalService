@@ -2,8 +2,22 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const Car = (props) => {
+
+    const handleSearchChange = (event) => {
+
+        props.onSearchCar(event.target.value)
+
+    };
+
     return (
         <div className="container my-5">
+            <div className="row">
+                <input
+                    type="text"
+                    onChange={handleSearchChange}
+                    placeholder="Search cars..."
+                />
+            </div>
             <div className="d-flex justify-content-between align-items-center mb-4">
 
                 <Link to="/cars/add" className="btn btn-success">
@@ -20,7 +34,7 @@ const Car = (props) => {
                                     <h5 className="card-title text-info">{term.name}</h5>
                                     <p className="card-text">
                                         <strong>Model:</strong> {term.model}
-                                        <br />
+                                        <br/>
                                         <strong>Description:</strong> {term.description}
                                     </p>
                                     <p className="text-muted">
