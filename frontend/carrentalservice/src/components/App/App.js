@@ -55,8 +55,8 @@ class App extends Component {
                                          onDelete={this.deleteCar}
                                          onRent={this.rentCar}
                                          onSearchCar={this.searchCar}
-                                         loadCars={this.loadCars}
-                                         setCars={this.setCars}/>
+                                         setCars={this.setCars}
+                                         loadCars={this.loadCars}/>
                                 ) : (
                                     <Navigate to="/login" />
                                 )

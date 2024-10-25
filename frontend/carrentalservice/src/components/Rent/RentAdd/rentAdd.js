@@ -57,7 +57,7 @@ const RentAdd = (props) => {
             <div className="row justify-content-center">
                 <div className="col-md-6">
                     <div className="card shadow-sm p-4">
-                        <h4 className="text-center mb-4">Create New Rent</h4>
+                        <h4 className="text-center mb-4">Rent this car</h4>
                         <form onSubmit={onFormSubmit}>
                             <div className="form-group mb-3">
                                 <label htmlFor="carName">Car</label>

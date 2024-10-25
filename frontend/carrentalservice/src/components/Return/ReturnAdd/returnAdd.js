@@ -40,7 +40,7 @@ const ReturnAdd = (props) => {
             <div className="row justify-content-center">
                 <div className="col-md-6">
                     <div className="card shadow-sm p-4">
-                        <h4 className="text-center mb-4">Create New Return</h4>
+                        <h4 className="text-center mb-4">Return</h4>
                         <form onSubmit={onFormSubmit}>
                             {rent.car && (
                                 <>
