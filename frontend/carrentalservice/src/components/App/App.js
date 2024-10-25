@@ -54,7 +54,9 @@ class App extends Component {
                                          getCarById={this.getCar}
                                          onDelete={this.deleteCar}
                                          onRent={this.rentCar}
-                                         onSearchCar={this.searchCar}/>
+                                         onSearchCar={this.searchCar}
+                                         loadCars={this.loadCars}
+                                         setCars={this.setCars}/>
                                 ) : (
                                     <Navigate to="/login" />
                                 )
@@ -262,6 +264,11 @@ class App extends Component {
                     })
                 });
         }
+    }
+    setCars = (cars) => {
+        this.setState({
+            cars: cars
+        })
     }
     loadInitialData = () => {
         this.loadCars();
